@@ -85,9 +85,10 @@ var contentLeftView  = new ContentLeftView();
 var contentRightView = new ContentRightView();
 var listObjectsView  = new ListObjectsView();
 var detailObjectView  = new DetailObjetsView();
+var modalEl = $("#myModal");
 var listType;
 var companyCollection;
-tpl.loadTemplates(['add_type','update_type','item_list_type','add_company','list_menu',"list_type"], function (){
+tpl.loadTemplates(['add_type','update_type','item_list_type','add_company','list_menu',"list_type","modal_add_type"], function (){
     app = new AppRouter();
     Backbone.emulateJSON = true;
     Backbone.history.start();
