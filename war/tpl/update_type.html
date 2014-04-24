@@ -1,0 +1,37 @@
+<form class="form-horizontal" role="form">
+  <fieldset>
+     <div>
+       <label for="name">Name
+          <input type="text" class="form-control" id="name" value="<%=name %>" />
+       </label>
+     </div>
+  </fieldset>
+  <fieldset>
+     <div>
+       <label for="description"> Description
+          <input type="text" class="form-control" id="description" required="required" value="<%=description %>"/>
+       </label>
+     </div>
+  </fieldset>
+  <fieldset>
+     <div>
+       <label for="max_item">Max Item
+          <input type="text" class="form-control" id="max_item" required="required" value="<%=maxItem %>"/>
+       </label>
+     </div>
+  </fieldset>
+  <fieldset>
+     <div>
+       <label for="min_item">Min Item
+          <input type="text" class="form-control" id="min_item" required="required" value="<%=minItem %>"/>
+       </label>
+     </div>
+  </fieldset>
+    <fieldset>
+      <div >
+         <button id ="btn-edit"  class="btn btn-primary btn-info"><span class="glyphicon glyphicon-pencil"></span> Edit</button>
+         <button id ="btn-delete"  class="btn  btn-primary btn-danger"><span class="glyphicon glyphicon-remove"></span> Delete</button>
+      </div>
+   </fieldset>
+</form>
+

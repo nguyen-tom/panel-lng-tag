@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+        <meta charset="utf-8">
+        <title>Note Language</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/global.css" rel="stylesheet">
+        
+        <!--[if lt IE 9]>
+          <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        <link rel="shortcut icon" href="/bootstrap/img/favicon.ico">
+        <link rel="apple-touch-icon" href="/bootstrap/img/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/bootstrap/img/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/bootstrap/img/apple-touch-icon-114x114.png">
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    </head>
+    
+    
+    <body  >
+        
+<div id="top-nav" class="navbar navbar-inverse navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-toggle"></span>
+      </button>
+      <a class="navbar-brand" href="#">Note-Language Panel</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        
+        <li class="dropdown">
+          <a class="dropdown-toggle" role="button" data-toggle="dropdown" href="#">
+            <i class="glyphicon glyphicon-user"></i> Login <span class="caret"></span></a>
+          <ul id="g-account-menu" class="dropdown-menu" role="menu">
+            <li><a href="#">My Profile</a></li>
+            <li><a href="#"><i class="glyphicon glyphicon-lock"></i>Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div><!-- /container -->
+</div>
+<!-- Main -->
+<div class="container" id ="#container">
+   
+  <!-- upper section -->
+    <div class="row" id="row-top-view"> 
+    <div class="col-md-3" id="content-left"></div>
+       <!-- list_menu -->
+     <div class="col-md-9" id ="content-right" >
+       <!-- column 2 -->	
+       <a href="#"><strong><i class="glyphicon glyphicon-dashboard"></i> My Dashboard</strong></a>  
+       <hr>
+       <div class="col-md-5" id="list-objects">
+            <!-- list objects -->
+       </div>
+       <div class="col-md-7" id ="detail-object">
+             <!-- detail objecs -->
+	    </div>
+     
+       </div><!--/row-->
+  </div><!--/col-span-9-->
+    
+  
+  <!-- /upper section -->
+  
+  <!-- lower section -->
+  <div class="row">
+    
+   
+  
+  </div><!-- lower section-->
+   <!-- /Main -->
+</div>
+<footer id="footer">
+  <div class="container clearfix" >
+   <div class=" privacy pull-left">
+     © Copyright Sgroup 2014. All Rights Reserved. Powered by
+   </div>
+  
+  </div>
+</footer>
+
+
+   
+    <script src="../js/bootstrap.js"></script>
+    <script src="../js/underscore-min.js"></script>
+    <script src="../js/backbone-min.js"></script>
+    <script src="../js/util/utils.js"></script>
+    <script src="../js/model/type.js"></script>
+    <script src="../js/collection/typeset.js"></script>
+    <script src="../js/view/app-views.js"></script>
+    <script src="../js/view/detail-object-view.js"></script>
+    <!-- Company -->
+    
+    <script src="../js/model/company.js"></script>
+    <script src="../js/collection/companyset.js"></script>
+    <script src="../js/view/list-company-view.js"></script>
+    <script src="../js/view/add-company-view.js"></script>
+    
+    
+    <!-- type -->
+    <script src="../js/view/detail-type-view.js"></script>
+    <script src="../js/view/row-top-view.js"></script>
+    <script src="../js/view/content-left-view.js"></script>
+    <script src="../js/view/content-right-view.js"></script>
+    <script src="../js/view/list-menu-view.js"></script>
+    <script src="../js/view/type-view.js"></script>
+    
+    <script src="../js/view/list-objects-view.js"></script>
+    
+    <script src="../js/view/add-type-view.js"></script>
+    <script src="../js/view/type_listview.js"></script>
+   
+    <script src="../js/router/router.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1154 @@
+/tq/mulodoAuthori 200 13182ms 0kb instance=0 AppEngine-Google; (+http://code.google.com/appengine) module=default version=back-dynamichigh
+0.1.0.2 - - [10/Mar/2014:01:45:55 -0700] "POST /tq/mulodoAuthori HTTP/1.1" 200 0 "http://back-dynamichigh.dev-staging.appspot.com/tq/bulkMldAuthori" "AppEngine-Google; (+http://code.google.com/appengine)" "0.back-dynamichigh.dev-staging.appspot.com" ms=13182 cpu_ms=5873 cpm_usd=0.000036 queue_name=bulk task_name=6954597347587819042 instance=0 app_engine_release=1.9.0 
+I controller.tq.MulodoAuthoriController run: Mulodo Authori Start.TaskName[6954597347587819042]
+I controller.tq.MulodoAuthoriController run: inputFilePath:/gs/fraud-buster-api/file-upload/shop001-TEST01-a-2014-03-10-08-45-0041-0-4472349994004738980.csv
+I controller.tq.MulodoAuthoriController toEventDto: Start mapping CSV to EventDto.
+I controller.tq.MulodoAuthoriController toEventDto: lines :1
+I controller.tq.MulodoAuthoriController toEventDto: split start
+I dao.EventDao createKeyName: keyName:140310084543544B5DD2D5018F74A14893F48288693BC91
+W dto.common.EventDto extractHttpHeaderInfo: The http header parameter[] is not valid.
+I service.EventInsertValidateService getNormalizedAddressWithUrlFetch: customer buyer.httpResponse:com.google.appengine.api.urlfetch.URLFetchServiceImpl$1@bd5143
+I service.EventInsertValidateService getNormalizedAddressWithUrlFetch: sRet[{"response":{"time":"7","result":"success","address":{"matched":"true","zipcode":"1870035","prefecture":"���������","city":"���������","town":"������������","akey":["1870035,3,25,12","1870035,3,25,12,*","1870035,*,25,12","1870035,3,*,12","1870035,3,25,*"]}}}]
+I [s~dev-staging/back-dynamichigh.374316541816476882].<stdout>: normalizer response string[{"response":{"time":"7","result":"success","address":{"matched":"true","zipcode":"1870035","prefecture":"?????????","city":"?????????","town":"????????????","akey":["1870035,3,25,12","1870035,3,25,12,*","1870035,*,25,12","1870035,3,*,12","1870035,3,25,*"]}}}]
+I service.EventInsertValidateService getNormalizedAddressWithUrlFetch: normalizedAddress buyer[[1870035,3,25,12, 1870035,3,25,12,*, 1870035,*,25,12, 1870035,3,*,12, 1870035,3,25,*, 187003532512]]
+I service.EventInsertValidateService getNormalizedAddressWithUrlFetch: This EC event is not GIFT.
+I service.EventInsertValidateService getNormalizedAddressWithUrlFetch: normalizedAddress buyer[[1870035,3,25,12, 1870035,3,25,12,*, 1870035,*,25,12, 1870035,3,*,12, 1870035,3,25,*, 187003532512]]
+I controller.cron.CounterUpController addTask: Adding task is success.
+W service.PhoneNumberCheckService getTel: The phone number[0423436938] does NOT exist in DB
+I controller.tq.MulodoAuthoriController createEventDtoFromTokens: ################# eventDto ################
+W service.PhoneNumberCheckService getTel: The phone number[0423436938] does NOT exist in DB
+I controller.tq.MulodoAuthoriController createEventDtoFromTokens: {logger=java.util.logging.Logger@1378ca7 HTTP_HEADER_COLUMNS=17 COOKIE_KEY=fraudbuster-key serialVersionUID=1 id=140310084543544B5DD2D5018F74A14893F48288693BC91 model_id=TEST01 request_datetime=2014/03/10 08:45:43 event_type=EC authori_deadline_datetime=null aaresult=null maresult=null score=null rules=null similars=null ec={serialVersionUID=1 buy_datetime=2013/07/09 04:39:47 settle={serialVersionUID=1 limit_price=null status=00 datetime=null amount=null currency=JPY method=01 pay_later=null credit_card=null POD=null pay_first=null e_money=null point=null bank_transfer=null installment=null payeasy=null } tenant={serialVersionUID=1 shop_tenant_id= tenant_limit_price= member_limit_change_ratio= tenant_name= tenant_url= deal_item_categoryA=null deal_item_categoryB=null deal_item_categoryC=null } customers={serialVersionUID=1 buyer={serialVersionUID=1 } delivery=[{serialVersionUID=1 }] puchasers=[] } } extras=null event_id_for_shop=1973785 device_info= http_header= deviceID=null mobileID=null cookie=null IPv4=null IPv6=null device_type=null primaryDID=null device={DELIMETER_MAIN=;: logger=java.util.logging.Logger@e6646 COOKIE_KEY=fraudbuster-key serialVersionUID=-229564176801210311 REQ13_SIZE=38 REQ14_SIZE=17 key=!shop001:Event("140310084543544B5DD2D5018F74A14893F48288693BC91")/Device(1) eventRef=org.slim3.datastore.ModelRef@9b3463d hasHttpInfo=false hasBrowserInfo=false dicVersion=1.0 createdAt=Mon Mar 10 08:45:43 UTC 2014 accept=null acceptCharset=null acceptEncoding=null acceptLanguage=null appCodeName=null appMinorVersion=null appName=null appVersion=null browserLang=null clientIp=null connection=null cookie=null cookieEnabled=null cpuClass=null dnt=null domain=null font=null fontSmoothing=null forwarded=null headerHost=null host=null hostname=null httpHeaders=null httpReferrer=null httpUserAgent=null ipAddress=null javaEnabled=null keepAlive=null language=null localTime=null mimeTypes=null onLine=null osCpu=null pathname=null platform=null plugins=null port=null productSub=null referrer=null remoteHost=null remotePort=null remoteUser=null screenAvailHeight=null screenAvailWidth=null screenColorDepth=null screenHeight=null screenWidth=null systemLang=null time=null timediff=null uaCpu=null updateInterval=null userAgent=null userLang=null via=null xForwardedIp=null xdpi=null ydpi=null mobileID=null iosSystemSize=null iosSystemFreeSize=null iosSystemNodes=null iosSystemFreeNodes=null iosSystemNumber=null iosSystemFileNumber=null iosUuid=null iosScreens=null iosBrightness=null iosBoundsOriginX=null iosBoundsOriginY=null iosBoundsSizeHeight=null iosBoundsSizeWidth=null iosMultiTaskingSupported=null iosDeviceName=null iosSystemName=null iosSystemVersion=null iosModel=null iosOrientation=null iosBatteryLevel=null iosBatteryMonitoringEnabled=null iosBatteryState=null iosProximityMonitoringEnabled=null iosProximityState=null iosLocalizedModel=null iosIdentifierForVendor=null iosUserInterfaceIdiom=null iosCarrierName=null iosIsoCountryCode=null iosMobileCountryCode=null iosMobileNetworkCode=null iosLocationServicesEnabled=null iosHeadingAvailable=null iosRegionMonitoringAvailable=null iosDeferredLocationUpdatesAvailable=null iosSignificantLocationChangeMonitoringAvailable=null iosCoordinateLatitude=null iosCoordinateLongitude=null iosAltitude=null iosCoordinate=null iosCourse=null iosHorizontalAccuracy=null iosSpeed=null iosTimestamp=null iosVerticalAccuracy=null iosAdvertisingIdentifier=null iosAdvertisingTrackingEnabled=null version=null } uaData=null fraudProbabilityCalculationVariableForNumber=null requestId=131127092000040D42EF658361A4BC99D0A35079666D1D4 inputRequestDatetime=null }
+I controller.tq.MulodoAuthoriController createEventDtoFromTokens: ###########################################
+I controller.tq.MulodoAuthoriController toEventDto: split end
+I controller.tq.MulodoAuthoriController toEventDto: Finish mapping CSV to EventDto.
+I service.BaseQueryService createXmlDoc: xmlStr:<request>
+   <shop_id>shop001</shop_id>
+   <request_datetime>2014/03/10 08:45:43</request_datetime>
+   <event>
+      <id>140310084543544B5DD2D5018F74A14893F48288693BC91</id>
+      <model_id>TEST01</model_id>
+      <request_datetime>2014/03/10 08:45:43</request_datetime>
+      <event_type>EC</event_type>
+      <ec>
+         <buy_datetime>2013/07/09 04:39:47</buy_datetime>
+         <settle>
+            <status>00</status>
+            <currency>JPY</currency>
+            <method>01</method>
+         </settle>
+         <tenant>
+            <shop_tenant_id></shop_tenant_id>
+            <tenant_limit_price></tenant_limit_price>
+            <member_limit_change_ratio></member_limit_change_ratio>
+            <tenant_name></tenant_name>
+            <tenant_url></tenant_url>
+         </tenant>
+         <customers>
+            <buyer>
+               <type>10</type>
+               <ID>94573</ID>
+               <hashed_name>
+                  <first_name>BE027828507B7301AC9CE760D72AED9C29D56442</first_name>
+                  <normalized_first_name>BE027828507B7301AC9CE760D72AED9C29D56442</normalized_first_name>
+                  <last_name>B7D634DA9697A3F9B0AB50B87AAC810836883294</last_name>
+                  <normalized_last_name>B7D634DA9697A3F9B0AB50B87AAC810836883294</normalized_last_name>
+                  <nameLength>4</nameLength>
+                  <kanjiCountInName>4</kanjiCountInName>
+                  <hiraganaCountInName>0</hiraganaCountInName>
+                  <katakanaCountInName>0</katakanaCountInName>
+                  <alphabetCountInName>0</alphabetCountInName>
+                  <otherCountInName>0</otherCountInName>
+                  <validName>1</validName>
+               </hashed_name>
+               <address>
+                  <country>JP</country>
+                  <zipcode>1870035</zipcode>
+                  <addressA>東京都</addressA>
+                  <addressB>小平市</addressB>
+                  <addressC>小川西町3-25-12</addressC>
+                  <fullAddress>東京都小平市小川西町3-25-12</fullAddress>
+                  <normalized>1870035,3,25,12</normalized>
+                  <normalized>1870035,3,25,12,*</normalized>
+                  <normalized>1870035,*,25,12</normalized>
+                  <normalized>1870035,3,*,12</normalized>
+                  <normalized>1870035,3,25,*</normalized>
+                  <normalized>187003532512</normalized>
+                  <zipMatchAdd>true</zipMatchAdd>
+               </address>
+               <tel>
+                  <fixed_number>0423436938</fixed_number>
+                  <telCutLast2Letters>04234369</telCutLast2Letters>
+                  <telCutLast1Letter>042343693</telCutLast1Letter>
+                  <mobile_number></mobile_number>
+                  <telStatus>N</telStatus>
+               </tel>
+               <email>
+                  <pc>
+                     <hashed_account></hashed_account>
+                     <domain></domain>
+                  </pc>
+                  <mobile>
+                     <hashed_account></hashed_account>
+                     <domain></domain>
+                  </mobile>
+               </email>
+               <company>
+                  <name></name>
+                  <department></department>
+                  <post></post>
+               </company>
+               <birth_day>1950/06/20</birth_day>
+               <sex>1</sex>
+            </buyer>
+            <delivery>
+               <type>20</type>
+               <ID>94573</ID>
+               <hashed_name>
+                  <first_name>BE027828507B7301AC9CE760D72AED9C29D56442</first_name>
+                  <normalized_first_name>BE027828507B7301AC9CE760D72AED9C29D56442</normalized_first_name>
+                  <last_name>B7D634DA9697A3F9B0AB50B87AAC810836883294</last_name>
+                  <normalized_last_name>B7D634DA9697A3F9B0AB50B87AAC810836883294</normalized_last_name>
+                  <nameLength>4</nameLength>
+                  <kanjiCountInName>4</kanjiCountInName>
+                  <hiraganaCountInName>0</hiraganaCountInName>
+                  <katakanaCountInName>0</katakanaCountInName>
+                  <alphabetCountInName>0</alphabetCountInName>
+                  <otherCountInName>0</otherCountInName>
+                  <validName>1</validName>
+               </hashed_name>
+               <address>
+                  <country>JP</country>
+                  <zipcode>1870035</zipcode>
+                  <addressA>東京都</addressA>
+                  <addressB>小平市</addressB>
+                  <addressC>小川西町3-25-12</addressC>
+                  <fullAddress>東京都小平市小川西町3-25-12</fullAddress>
+                  <normalized>1870035,3,25,12</normalized>
+                  <normalized>1870035,3,25,12,*</normalized>
+                  <normalized>1870035,*,25,12</normalized>
+                  <normalized>1870035,3,*,12</normalized>
+                  <normalized>1870035,3,25,*</normalized>
+                  <normalized>187003532512</normalized>
+               </address>
+               <tel>
+                  <fixed_number>0423436938</fixed_number>
+                  <telCutLast2Letters>04234369</telCutLast2Letters>
+                  <telCutLast1Letter>042343693</telCutLast1Letter>
+                  <mobile_number></mobile_number>
+                  <telStatus>N</telStatus>
+               </tel>
+               <email>
+                  <pc>
+                     <hashed_account></hashed_account>
+                     <domain></domain>
+                  </pc>
+                  <mobile>
+                     <hashed_account></hashed_account>
+                     <domain></domain>
+                  </mobile>
+               </email>
+               <company>
+                  <name></name>
+                  <department></department>
+                  <post></post>
+               </company>
+               <shipping>
+                  <amount>32130</amount>
+                  <items_amount>32130</items_amount>
+                  <shipping_cost>0</shipping_cost>
+                  <items>
+                     <item>
+                        <shop_item_id>221205</shop_item_id>
+                        <item_price>30600</item_price>
+                        <item_quantity>1</item_quantity>
+                        <item_name>[新]GOLD270粒箱</item_name>
+                     </item>
+                     <item>
+                        <shop_item_id>228103</shop_item_id>
+                        <item_price>12000</item_price>
+                        <item_quantity>1</item_quantity>
+                        <item_name>[新]ポイント交換GOLD90粒箱</item_name>
+                     </item>
+                  </items>
+               </shipping>
+               <birth_day>1950/06/20</birth_day>
+               <sex>1</sex>
+            </delivery>
+         </customers>
+      </ec>
+      <event_id_for_shop>1973785</event_id_for_shop>
+      <device_info></device_info>
+      <http_header></http_header>
+      <device/>
+   </event>
+</request>
+I service.BaseQueryService run: Run BaseQuery[G-BLK0500] Query[SELECT * FROM Black WHERE (invalid = false AND shopMemberID = 94573)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK0600] Query[SELECT * FROM Black WHERE (invalid = false AND lastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND firstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND birthDate = 1950/06/20)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK0700] Query[SELECT * FROM Black WHERE (invalid = false AND normalizedLastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND normalizedFirstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND birthDate = 1950/06/20)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK0800] Query[SELECT * FROM Black WHERE (invalid = false AND lastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND firstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK0900] Query[SELECT * FROM Black WHERE (invalid = false AND normalizedLastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND normalizedFirstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK1000] Query[SELECT * FROM Black WHERE (invalid = false AND fullAddress = 東京都小平市小川西町3-25-12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK1100] Query[SELECT * FROM Black WHERE (invalid = false AND lastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND firstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND birthDate = 1950/06/20)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK1200] Query[SELECT * FROM Black WHERE (invalid = false AND normalizedLastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND normalizedFirstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND birthDate = 1950/06/20)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK1300] Query[SELECT * FROM Black WHERE (invalid = false AND lastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND firstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK1400] Query[SELECT * FROM Black WHERE (invalid = false AND normalizedLastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND normalizedFirstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK1500] Query[SELECT * FROM Black WHERE (invalid = false AND fullAddress = 東京都小平市小川西町3-25-12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK1600] Query[SELECT * FROM Black WHERE (invalid = false AND tel = 0423436938)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK1710] Query[SELECT * FROM Black WHERE (invalid = false AND mobileTel = 0423436938)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK2600] Query[SELECT * FROM Black WHERE (invalid = false AND tel = 0423436938)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK3000] Query[SELECT * FROM Black WHERE (invalid = false AND lastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK3100] Query[SELECT * FROM Black WHERE (invalid = false AND firstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK3200] Query[SELECT * FROM Black WHERE (invalid = false AND lastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND birthDate = 1950/06/20)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK3300] Query[SELECT * FROM Black WHERE (invalid = false AND firstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND birthDate = 1950/06/20)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK3400] Query[SELECT * FROM Black WHERE (invalid = false AND normalizedLastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK3500] Query[SELECT * FROM Black WHERE (invalid = false AND normalizedFirstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK3600] Query[SELECT * FROM Black WHERE (invalid = false AND normalizedLastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND birthDate = 1950/06/20)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK3700] Query[SELECT * FROM Black WHERE (invalid = false AND normalizedFirstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND birthDate = 1950/06/20)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK3800] Query[SELECT * FROM Black WHERE (invalid = false AND normalizedAddress = 1870035,3,25,12 AND birthDate = 1950/06/20)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-BLK4000] Query[SELECT * FROM Black WHERE (invalid = false AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-WHT0500] Query[SELECT * FROM White WHERE (invalid = false AND register = shop001 AND shopMemberID = 94573)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-WHT0600] Query[SELECT * FROM White WHERE (invalid = false AND register = shop001 AND lastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND firstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND birthDate = 1950/06/20)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-WHT0700] Query[SELECT * FROM White WHERE (invalid = false AND register = shop001 AND normalizedLastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND normalizedFirstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND birthDate = 1950/06/20)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-WHT0800] Query[SELECT * FROM White WHERE (invalid = false AND register = shop001 AND lastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND firstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-WHT0900] Query[SELECT * FROM White WHERE (invalid = false AND register = shop001 AND normalizedLastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND normalizedFirstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-WHT1000] Query[SELECT * FROM White WHERE (invalid = false AND register = shop001 AND fullAddress = 東京都小平市小川西町3-25-12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-WHT1100] Query[SELECT * FROM White WHERE (invalid = false AND register = shop001 AND lastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND firstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND birthDate = 1950/06/20)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-WHT1200] Query[SELECT * FROM White WHERE (invalid = false AND register = shop001 AND normalizedLastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND normalizedFirstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND birthDate = 1950/06/20)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-WHT1300] Query[SELECT * FROM White WHERE (invalid = false AND register = shop001 AND lastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND firstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-WHT1400] Query[SELECT * FROM White WHERE (invalid = false AND register = shop001 AND normalizedLastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND normalizedFirstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-WHT1500] Query[SELECT * FROM White WHERE (invalid = false AND register = shop001 AND fullAddress = 東京都小平市小川西町3-25-12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-WHT1600] Query[SELECT * FROM White WHERE (invalid = false AND register = shop001 AND tel = 0423436938)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-WHT1710] Query[SELECT * FROM White WHERE (invalid = false AND register = shop001 AND mobileTel = 0423436938)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-WHT2600] Query[SELECT * FROM White WHERE (invalid = false AND register = shop001 AND tel = 0423436938)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[G-WHT3000] Query[SELECT * FROM White WHERE (invalid = false AND register = shop001 AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-CST0500] Query[SELECT * FROM Customer WHERE shopMemberID = 94573 ORDER BY reqDT DESC] fetchOption[FetchOptions[limit=80]]
+I service.BaseQueryService run: BaseQueryResult entityList : 80
+I service.BaseQueryService run: Run BaseQuery[S-CST0600] Query[SELECT * FROM Customer WHERE (lastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND firstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND birthDate = 1950/06/20) ORDER BY reqDT DESC] fetchOption[FetchOptions[limit=80]]
+I service.BaseQueryService run: BaseQueryResult entityList : 80
+I service.BaseQueryService run: Run BaseQuery[S-CST0700] Query[SELECT * FROM Customer WHERE (normalizedLastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND normalizedFirstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND birthDate = 1950/06/20) ORDER BY reqDT DESC] fetchOption[FetchOptions[limit=80]]
+I service.BaseQueryService run: BaseQueryResult entityList : 80
+I service.BaseQueryService run: Run BaseQuery[S-CST0800] Query[SELECT * FROM Customer WHERE (lastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND firstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND normalizedAddress = 1870035,3,25,12) ORDER BY reqDT DESC] fetchOption[FetchOptions[limit=80]]
+I service.BaseQueryService run: BaseQueryResult entityList : 80
+I service.BaseQueryService run: Run BaseQuery[S-CST0900] Query[SELECT * FROM Customer WHERE (normalizedLastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND normalizedFirstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND normalizedAddress = 1870035,3,25,12) ORDER BY reqDT DESC] fetchOption[FetchOptions[limit=80]]
+I service.BaseQueryService run: BaseQueryResult entityList : 80
+I service.BaseQueryService run: Run BaseQuery[S-CST1000] Query[SELECT * FROM Customer WHERE fullAddress = 東京都小平市小川西町3-25-12 ORDER BY reqDT DESC] fetchOption[FetchOptions[limit=80]]
+I service.BaseQueryService run: BaseQueryResult entityList : 80
+I service.BaseQueryService run: Run BaseQuery[S-CST1100] Query[SELECT * FROM Customer WHERE (lastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND firstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND birthDate = 1950/06/20) ORDER BY reqDT DESC] fetchOption[FetchOptions[limit=80]]
+I service.BaseQueryService run: BaseQueryResult entityList : 80
+I service.BaseQueryService run: Run BaseQuery[S-CST1200] Query[SELECT * FROM Customer WHERE (normalizedLastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND normalizedFirstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND birthDate = 1950/06/20) ORDER BY reqDT DESC] fetchOption[FetchOptions[limit=80]]
+I service.BaseQueryService run: BaseQueryResult entityList : 80
+I service.BaseQueryService run: Run BaseQuery[S-CST1300] Query[SELECT * FROM Customer WHERE (lastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND firstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND normalizedAddress = 1870035,3,25,12) ORDER BY reqDT DESC] fetchOption[FetchOptions[limit=80]]
+I service.BaseQueryService run: BaseQueryResult entityList : 80
+I service.BaseQueryService run: Run BaseQuery[S-CST1400] Query[SELECT * FROM Customer WHERE (normalizedLastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND normalizedFirstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND normalizedAddress = 1870035,3,25,12) ORDER BY reqDT DESC] fetchOption[FetchOptions[limit=80]]
+I service.BaseQueryService run: BaseQueryResult entityList : 80
+I service.BaseQueryService run: Run BaseQuery[S-CST1500] Query[SELECT * FROM Customer WHERE fullAddress = 東京都小平市小川西町3-25-12 ORDER BY reqDT DESC] fetchOption[FetchOptions[limit=80]]
+I service.BaseQueryService run: BaseQueryResult entityList : 80
+I service.BaseQueryService run: Run BaseQuery[S-CST1600] Query[SELECT * FROM Customer WHERE tel = 0423436938 ORDER BY reqDT DESC] fetchOption[FetchOptions[limit=80]]
+I service.BaseQueryService run: BaseQueryResult entityList : 80
+I service.BaseQueryService run: Run BaseQuery[S-CST1710] Query[SELECT * FROM Customer WHERE mobileTel = 0423436938 ORDER BY reqDT DESC] fetchOption[FetchOptions[limit=80]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-CST2600] Query[SELECT * FROM Customer WHERE normalizedAddress = 1870035,3,25,12 ORDER BY reqDT DESC] fetchOption[FetchOptions[limit=80]]
+I service.BaseQueryService run: BaseQueryResult entityList : 80
+I service.BaseQueryService run: Run BaseQuery[S-CST2700] Query[SELECT * FROM Customer WHERE (zipcode = 1870035 AND firstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND birthDate = 1950/06/20) ORDER BY reqDT DESC] fetchOption[FetchOptions[limit=80]]
+I service.BaseQueryService run: BaseQueryResult entityList : 80
+I service.BaseQueryService run: Run BaseQuery[S-CST2900] Query[SELECT * FROM Customer WHERE tel = 0423436938 ORDER BY reqDT DESC] fetchOption[FetchOptions[limit=80]]
+I service.BaseQueryService run: BaseQueryResult entityList : 80
+I service.BaseQueryService run: Run BaseQuery[S-CST3400] Query[SELECT * FROM Customer WHERE (lastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND firstName = BE027828507B7301AC9CE760D72AED9C29D56442) ORDER BY reqDT DESC] fetchOption[FetchOptions[limit=80]]
+I service.BaseQueryService run: BaseQueryResult entityList : 80
+I service.BaseQueryService run: Run BaseQuery[S-CST3500] Query[SELECT * FROM Customer WHERE (normalizedLastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND normalizedFirstName = BE027828507B7301AC9CE760D72AED9C29D56442) ORDER BY reqDT DESC] fetchOption[FetchOptions[limit=80]]
+I service.BaseQueryService run: BaseQueryResult entityList : 80
+I service.BaseQueryService run: Run BaseQuery[S-CST3600] Query[SELECT * FROM Customer WHERE normalizedAddress = 1870035,3,25,12 ORDER BY reqDT DESC] fetchOption[FetchOptions[limit=80]]
+I service.BaseQueryService run: BaseQueryResult entityList : 80
+I service.BaseQueryService run: Run BaseQuery[S-EVE0100] Query[SELECT * FROM Event WHERE (deleted = false AND shopEventID = 1973785)] fetchOption[FetchOptions[limit=30]]
+I service.BaseQueryService run: BaseQueryResult entityList : 30
+I service.BaseQueryService run: Run BaseQuery[G-NGW0100] Query[SELECT * FROM Negative WHERE eventType = EC] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 10
+I service.BaseQueryService run: Run BaseQuery[G-PSW0100] Query[SELECT * FROM Positive WHERE eventType = EC] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 3
+I service.BaseQueryService run: Run BaseQuery[G-MOB0100] Query[SELECT * FROM Mobile] fetchOption[FetchOptions[limit=5]]
+I service.BaseQueryService run: BaseQueryResult entityList : 1
+I service.BaseQueryService run: Run BaseQuery[S-ORG0100] Query[SELECT * FROM Original WHERE (invalid = false AND shopMemberID = 94573)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG0200] Query[SELECT * FROM Original WHERE (invalid = false AND lastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND firstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND birthDate = 1950/06/20)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG0300] Query[SELECT * FROM Original WHERE (invalid = false AND normalizedLastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND normalizedFirstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND birthDate = 1950/06/20)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG0400] Query[SELECT * FROM Original WHERE (invalid = false AND lastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND firstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG0500] Query[SELECT * FROM Original WHERE (invalid = false AND normalizedLastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND normalizedFirstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG0600] Query[SELECT * FROM Original WHERE (invalid = false AND fullAddress = 東京都小平市小川西町3-25-12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG0700] Query[SELECT * FROM Original WHERE (invalid = false AND lastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND firstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND birthDate = 1950/06/20)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG0800] Query[SELECT * FROM Original WHERE (invalid = false AND normalizedLastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND normalizedFirstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND birthDate = 1950/06/20)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG0900] Query[SELECT * FROM Original WHERE (invalid = false AND lastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND firstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG1000] Query[SELECT * FROM Original WHERE (invalid = false AND normalizedLastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND normalizedFirstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG1100] Query[SELECT * FROM Original WHERE (invalid = false AND fullAddress = 東京都小平市小川西町3-25-12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG1200] Query[SELECT * FROM Original WHERE (invalid = false AND tel = 0423436938)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG1310] Query[SELECT * FROM Original WHERE (invalid = false AND mobileTel = 0423436938)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG1600] Query[SELECT * FROM Original WHERE (invalid = false AND lastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND birthDate = 1950/06/20)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG1700] Query[SELECT * FROM Original WHERE (invalid = false AND firstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND birthDate = 1950/06/20)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG1800] Query[SELECT * FROM Original WHERE (invalid = false AND normalizedLastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG1900] Query[SELECT * FROM Original WHERE (invalid = false AND normalizedFirstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG2000] Query[SELECT * FROM Original WHERE (invalid = false AND normalizedLastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND birthDate = 1950/06/20)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG2100] Query[SELECT * FROM Original WHERE (invalid = false AND normalizedFirstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND birthDate = 1950/06/20)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG2200] Query[SELECT * FROM Original WHERE (invalid = false AND normalizedAddress = 1870035,3,25,12 AND birthDate = 1950/06/20)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG2300] Query[SELECT * FROM Original WHERE (invalid = false AND tel = 0423436938)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG2700] Query[SELECT * FROM Original WHERE (invalid = false AND lastName = B7D634DA9697A3F9B0AB50B87AAC810836883294 AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG2800] Query[SELECT * FROM Original WHERE (invalid = false AND firstName = BE027828507B7301AC9CE760D72AED9C29D56442 AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG2900] Query[SELECT * FROM Original WHERE (invalid = false AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService run: Run BaseQuery[S-ORG3000] Query[SELECT * FROM Original WHERE (invalid = false AND normalizedAddress = 1870035,3,25,12)] fetchOption[FetchOptions[limit=10]]
+I service.BaseQueryService run: BaseQueryResult entityList : 0
+I service.BaseQueryService filterQueryResult: new Key of QueryResult : G-BLK4100
+I service.BaseQueryService filterQueryResult: new Key of QueryResult : G-BLK4200
+I service.BaseQueryService filterQueryResult: new Key of QueryResult : G-WHT3200
+I service.BaseQueryService filterQueryResult: new Key of QueryResult : G-WHT3300
+I service.BaseQueryService filterQueryResult: new Key of QueryResult : S-CST3700
+I service.BaseQueryService filterQueryResult: new Key of QueryResult : S-CST3800
+I service.authori.RuleBaseAuthoriLogic authorize: 確認 baseQueryService : service.BaseQueryService@1d25d53
+I dto.common.EventDto createFraudProbabilityCalculationVariableForNumber: settle_amount : null
+I dto.common.EventDto createFraudProbabilityCalculationVariableForNumber: fraudProbabilityCalculationVariableForNumber : null
+I controller.cron.CounterController addTask: Adding task is success.
+I controller.tq.DeviceController addTask: DeviceController addTask run
+I controller.tq.DeviceController addTask: Adding task is success.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("AMOUNT_DOWN")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("AMOUNT_UP")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("AMOUNT_UP-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[52500] operator[03] compareType[1] property[event.ec.settle.amount]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DISCNCT_FIXTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DISCNCT_FIXTEL-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[N] y[0] operator[00] compareType[3] property[event.ec.customers.buyer.tel.telStatus]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DISCNCT_MOBTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DISCNCT_MOBTEL-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[0] operator[00] compareType[3] property[event.ec.customers.buyer.tel.mobileTelStatus]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("GIFT")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("HIAMOUNT_EVEN")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("HIRAGANA_NAME")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("HIRAGANA_NAME-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[4] y[0] operator[00] compareType[1] property[event.ec.customers.buyer.hashed_name.nameLength]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("HIRAGANA_NAME")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("HIRAGANA_NAME-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[4] y[0] operator[00] compareType[1] property[event.ec.customers.delivery.hashed_name.nameLength]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("ILLEGAL_TEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("ILLEGAL_TEL-0")]
+I util.ScoringUtil doFunction: function start. function name[getNumberCount] param[0423436938]
+I util.ScoringUtil doFunction: function start. function name[stringLength] param[0423436938]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[10] y[10] operator[02] compareType[1] property[event.ec.customers.buyer.tel.fixed_number]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("ILLEGAL_TEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("ILLEGAL_TEL-1")]
+I util.ScoringUtil doFunction: function start. function name[getNumberCount] param[null]
+I util.ScoringUtil doFunction: function start. function name[stringLength] param[null]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[null] operator[02] compareType[1] property[event.ec.customers.buyer.tel.mobile_number]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("INVALIDMOBTEL")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("INVALIDTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("INVALIDTEL-1")]
+I util.ScoringUtil doFunction: function start. function name[stringLength] param[0423436938]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[10] y[10] operator[02] compareType[1] property[event.ec.customers.buyer.tel.fixed_number]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("ITEM_NUMBER")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("ITEM_PRICE")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("LOWAGE")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("LOWAGE_CARD")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("LOWAGE_HIAMOUNT")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("MARK_NAME")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("MARK_NAME-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[event.ec.customers.buyer.hashed_name.otherCountInName]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("MARK_NAME")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("MARK_NAME-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[event.ec.customers.delivery.hashed_name.otherCountInName]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("NAME_ALPHA")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("NAME_ALPHA-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[4] y[0] operator[00] compareType[1] property[event.ec.customers.buyer.hashed_name.nameLength]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("NO_ADD_NUMBER")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("NO_ADD_NUMBER-0")]
+I util.ScoringUtil doFunction: function start. function name[stringLength] param[[1870035,3,25,12, 1870035,3,25,12,*, 1870035,*,25,12, 1870035,3,*,12, 1870035,3,25,*, 187003532512]]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[15] y[9] operator[02] compareType[1] property[event.ec.customers.buyer.address.normalized]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("NO_AT_PRD_MAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("NO_AT_PRD_MAIL-1")]
+I util.ScoringUtil doFunction: function start. function name[stringLength] param[null]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[0] operator[03] compareType[1] property[event.ec.customers.buyer.email.pc.domain]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("NO_AT_PRD_MOBMAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("NO_AT_PRD_MOBMAIL-1")]
+I util.ScoringUtil doFunction: function start. function name[stringLength] param[null]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[0] operator[03] compareType[1] property[event.ec.customers.buyer.email.mobile.domain]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("NO_CITY")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("NO_MATCH_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("NO_MATCH_ADD-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[true] y[FALSE] operator[00] compareType[3] property[event.ec.customers.buyer.address.zipMatchAdd]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("NO_NAME_DICT")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("NO_NAME_DICT-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[1] y[0] operator[00] compareType[3] property[event.ec.customers.buyer.hashed_name.validName]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("PHONE_DIGIT")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("SHT_NAME")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("SHT_NAME-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[4] y[3] operator[02] compareType[1] property[event.ec.customers.buyer.hashed_name.nameLength]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("TEL050_FIXTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("TEL050_FIXTEL-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0423436938] y[050] operator[07] compareType[3] property[event.ec.customers.buyer.tel.fixed_number]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("TEL050_MOBTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("TEL050_MOBTEL-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[050] operator[07] compareType[3] property[event.ec.customers.buyer.tel.mobile_number]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("TEL070_FIXTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("TEL070_FIXTEL-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0423436938] y[070] operator[07] compareType[3] property[event.ec.customers.buyer.tel.fixed_number]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("TEL070_MOBTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("TEL070_MOBTEL-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[070] operator[07] compareType[3] property[event.ec.customers.buyer.tel.mobile_number]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("UNK_CNCT_FIXTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("UNK_CNCT_FIXTEL-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[N] y[1] operator[01] compareType[3] property[event.ec.customers.buyer.tel.telStatus]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("UNK_CNCT_FIXTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("UNK_CNCT_FIXTEL-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[N] y[0] operator[01] compareType[3] property[event.ec.customers.buyer.tel.telStatus]
+I service.authori.RuleBaseAuthoriLogic scoring: The rule[!shop001:AuthoriModel("TEST01")/ScoringRule("UNK_CNCT_FIXTEL")] fired!
+I service.authori.RuleBaseAuthoriLogic doAlert: The alert mail was sent:mailto[[makoto.kameyama@cacco.co.jp]] body[アラート通知設定有効のスコアリングルールが発動しました。
+企業コード[shop001]
+審査モデルID[TEST01]
+イベントID[140310084543544B5DD2D5018F74A14893F48288693BC91]
+スコアリングルールコード[UNK_CNCT_FIXTEL]
+]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("UNK_CNCT_MOBTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("UNK_CNCT_MOBTEL-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[1] operator[01] compareType[3] property[event.ec.customers.buyer.tel.mobileTelStatus]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("ADD_VELO")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BAD_IP")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BAD_IP-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[JP] operator[01] compareType[3] property[event.ec.customers.buyer.countryFromIPv4]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_ADD_MAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_ADD_MAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_ADD_MOBMAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_ADD_MOBMAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_ADD_MOBTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_ADD_MOBTEL-2")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_ADD_TEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_ADD_TEL-2")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_ADD_TEL080")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_ADD_TEL090")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_CCHASH")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_COK")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_COK-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_DID")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_DID-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[CPUiPhoneOS[0-9_]*likeMacOSX] operator[14] compareType[3] property[event.device.userAgent]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_DID_IP")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_DID_IP-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_GIFT_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_GIFT_ADD-1")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_GIFT_NAME")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_GIFT_NAME-1")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_GIFT_TEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_GIFT_TEL-1")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_KM_CUSTID")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_MOBMAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_MOBMAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_MOBTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_MOBTEL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_MOBUID")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_MOBUID-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_NAME_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_NAME_ADD-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_NAME_BDAY")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_NAME_IP")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_NAME_IP-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_NAME_MAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_NAME_MAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_NAME_MOBMAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_NAME_MOBMAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_NAME_MOBTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_NAME_MOBTEL-2")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_NAME_TEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_NAME_TEL-2")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_PCMAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_PCMAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_SNAME_ADD")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_SNAME_BDAY")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_SNAME_IP")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_SNAME_IP-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_SNAME_MAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_SNAME_MAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_SNAME_MOBMAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_SNAME_MOBMAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_SNAME_MOBTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_SNAME_MOBTEL-2")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_SNAME_TEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_SNAME_TEL-2")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_TEL080")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_TEL080-1")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("BLK_TEL090")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("BLK_TEL090-1")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("BTD_ADD_VELO")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("BTD_IP_VELO")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CARDNMB_VELO")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("COK_VELO")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CRDT_MOB_CCHASH")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CRDT_MOB_DID")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CRDT_MOB_MOBMAIL")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CRDT_MOB_PCMAIL")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CRDT_NOMOB_CCHASH")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CRDT_NOMOB_DID")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CRDT_NOMOB_MOBMAIL")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CRDT_NOMOB_PCMAIL")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CREDITDID")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CREDIT_ADD")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CREDIT_BTD_ADD")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CREDIT_BTD_IP")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CREDIT_CARDNMB")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CREDIT_MAIL")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CREDIT_MOBILEMAIL")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CREDIT_MOBILETEL")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CREDIT_NAME_ADD")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CREDIT_NAME_BTD_IP")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CREDIT_NAME_CMP")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CREDIT_NAME_CMP_IP")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CREDIT_NAME_IP")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CREDIT_NAME_ZIP_BD")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("CREDIT_TELNMB")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("CURRENT_POST_NO_EXIST_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("CURRENT_POST_NO_EXIST_ADD-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[3] operator[00] compareType[3] property[event.ec.customers.buyer.address.addressType]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("CURRENT_POST_OLD_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("CURRENT_POST_OLD_ADD-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[2] operator[00] compareType[3] property[event.ec.customers.buyer.address.addressType]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_ADD-0")]
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I service.authori.AutoAuthoriResult addCustomerKey: Kind of key :Customer
+I util.ScoringUtil doFunction: function start. function name[DELAY_ADD-0-0] param[0]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_ADD_MAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_ADD_MAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+W service.authori.RuleBaseAuthoriLogic isConditionMatched: BusinessLogicMismatchException:This function 'DELAY_ADD-0-0'is undefined.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_ADD_MOBMAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_ADD_MOBMAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_ADD_MOBTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_ADD_MOBTEL-2")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_ADD_TEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_ADD_TEL-2")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_BTD_ADD")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_BTD_IP")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_CARDNMB")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_COK")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_COK-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_DID")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_DID-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[CPUiPhoneOS[0-9_]*likeMacOSX] operator[14] compareType[3] property[event.device.userAgent]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_DID_IP")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_DID_IP-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_MAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_MAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_MOBILEMAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_MOBILEMAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_MOBILETEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_MOBILETEL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_MOBUID")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_MOBUID-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_NAME_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_NAME_ADD-0")]
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[60] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: The rule[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_NAME_ADD")] fired!
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_NAME_BTD_IP")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_NAME_CMP")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_NAME_CMP_IP")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_NAME_IP")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_NAME_IP-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_NAME_MAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_NAME_MAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_NAME_MOBMAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_NAME_MOBMAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_NAME_MOBTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_NAME_MOBTEL-2")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_NAME_TEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_NAME_TEL-2")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_NAME_ZIP_BD")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_SNAME_ADD")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_SNAME_MAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_SNAME_MAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_SNAME_MOBMAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_SNAME_MOBMAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_SNAME_MOBTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_SNAME_MOBTEL-2")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_SNAME_TEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_SNAME_TEL-2")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("DELAY_TEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("DELAY_TEL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("DID_VELO")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("FIXPHONE_DIGIT_FIX")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("FIXPHONE_DIGIT_FIX-1")]
+I util.ScoringUtil doFunction: function start. function name[getLetter3] param[0423436938]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[042] y[[050, 070, 080, 090]] operator[10] compareType[3] property[event.ec.customers.buyer.tel.fixed_number]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("FIXPHONE_DIGIT_FIX")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("FIXPHONE_DIGIT_FIX-0")]
+I util.ScoringUtil doFunction: function start. function name[stringLength] param[0423436938]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[10] y[10] operator[01] compareType[1] property[event.ec.customers.buyer.tel.fixed_number]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("FIXPHONE_DIGIT_FIX_DELIVER")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("FIXPHONE_DIGIT_FIX_DELIVER-1")]
+I util.ScoringUtil doFunction: function start. function name[getLetter3] param[0423436938]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[042] y[[050, 070, 080, 090]] operator[10] compareType[3] property[event.ec.customers.delivery.tel.fixed_number]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("FIXPHONE_DIGIT_FIX_DELIVER")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("FIXPHONE_DIGIT_FIX_DELIVER-0")]
+I util.ScoringUtil doFunction: function start. function name[stringLength] param[0423436938]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[10] y[10] operator[01] compareType[1] property[event.ec.customers.delivery.tel.fixed_number]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("FIXPHONE_DIGIT_MOB")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("FIXPHONE_DIGIT_MOB-1")]
+I util.ScoringUtil doFunction: function start. function name[getLetter3] param[0423436938]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[042] y[[050, 070, 080, 090]] operator[00] compareType[3] property[event.ec.customers.buyer.tel.fixed_number]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("FIXPHONE_DIGIT_MOB_DELIVER")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("FIXPHONE_DIGIT_MOB_DELIVER-1")]
+I util.ScoringUtil doFunction: function start. function name[getLetter3] param[0423436938]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[042] y[[050, 070, 080, 090]] operator[00] compareType[3] property[event.ec.customers.delivery.tel.fixed_number]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("FREEMAIL")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("IPTEL_NONEX_NUM")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("IPTEL_NONEX_NUM-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[[050182, 050183, 050184, 050185, 050186, 050187, 050188, 050189, 050190, 050191, 050192, 050193, 050194, 050195, 050196, 050197, 050198, 050199, 050204, 050205, 050206, 050207, 050208, 050209, 050210, 050211, 050212, 050213, 050214, 050215, 050216, 050217, 050218, 050219, 050221, 050222, 050223, 050224, 050225, 050226, 050227, 050228, 050229, 050230, 050231, 050232, 050233, 050234, 050235, 050236, 050237, 050238, 050239, 050241, 050242, 050243, 050244, 050245, 050246, 050247, 050248, 050249, 050250, 050251, 050252, 050253, 050254, 050255, 050256, 050257, 050258, 050259, 050260, 050261, 050262, 050263, 050264, 050265, 050266, 050267, 050268, 050269, 050270, 050271, 050272, 050273, 050274, 050275, 050276, 050277, 050278, 050279, 050280, 050281, 050282, 050283, 050284, 050285, 050286, 050287, 050288, 050289, 050290, 050291, 050292, 050293, 050294, 050295, 050296, 050297, 050298, 050299, 050326, 050327, 050328, 050329, 050383, 050384, 050385, 050386, 050387, 050388, 050389, 050391, 050392, 050393, 050394, 050395, 050396, 050397, 050398, 050399, 050400, 050401, 050402, 050403, 050404, 050405, 050406, 050407, 050408, 050409, 050410, 050411, 050412, 050413, 050414, 050415, 050416, 050417, 050418, 050419, 050420, 050421, 050422, 050423, 050424, 050425, 050426, 050427, 050428, 050429, 050430, 050431, 050432, 050433, 050434, 050435, 050436, 050437, 050438, 050439, 050440, 050441, 050442, 050443, 050444, 050445, 050446, 050447, 050448, 050449, 050450, 050451, 050452, 050453, 050454, 050455, 050456, 050457, 050458, 050459, 050460, 050461, 050462, 050463, 050464, 050465, 050466, 050467, 050468, 050469, 050470, 050471, 050472, 050473, 050474, 050475, 050476, 050477, 050478, 050479, 050480, 050481, 050482, 050483, 050484, 050485, 050486, 050487, 050488, 050489, 050490, 050491, 050492, 050493, 050494, 050495, 050496, 050497, 050498, 050499, 050501, 050502, 050503, 050504, 050505, 050506, 050507, 050508, 050509, 050510, 050511, 050512, 050513, 050514, 050515, 050516, 050517, 050518, 050519, 050521, 050522, 050523, 050524, 050525, 050526, 050527, 050528, 050529, 050530, 050531, 050532, 050533, 050534, 050535, 050536, 050537, 050538, 050539, 050540, 050541, 050542, 050543, 050544, 050545, 050546, 050547, 050548, 050549, 050557, 050558, 050559, 050560, 050561, 050562, 050563, 050564, 050565, 050566, 050567, 050568, 050569, 050570, 050571, 050572, 050573, 050574, 050575, 050576, 050577, 050578, 050585, 050586, 050587, 050588, 050589, 050590, 050591, 050592, 050593, 050594, 050595, 050596, 050597, 050598, 050599, 050601, 050602, 050603, 050604, 050605, 050606, 050607, 050608, 050609, 050611, 050612, 050613, 050614, 050615, 050616, 050617, 050618, 050619, 050620, 050621, 050622, 050623, 050624, 050625, 050626, 050627, 050628, 050629, 050630, 050631, 050632, 050633, 050634, 050635, 050636, 050637, 050638, 050639, 050640, 050641, 050642, 050643, 050644, 050645, 050646, 050647, 050648, 050649, 050650, 050651, 050652, 050653, 050654, 050655, 050656, 050657, 050658, 050659, 050660, 050663, 050664, 050665, 050666, 050667, 050668, 050669, 050670, 050671, 050672, 050673, 050674, 050675, 050676, 050677, 050678, 050679, 050680, 050681, 050682, 050683, 050684, 050685, 050687, 050688, 050689, 050690, 050691, 050692, 050693, 050694, 050695, 050696, 050697, 050698, 050699, 050701, 050702, 050703, 050704, 050705, 050706, 050707, 050708, 050709, 050712, 050713, 050714, 050715, 050716, 050717, 050718, 050719, 050720, 050721, 050722, 050723, 050724, 050725, 050726, 050727, 050728, 050729, 050731, 050732, 050733, 050734, 050735, 050736, 050737, 050738, 050739, 050740, 050741, 050742, 050743, 050744, 050745, 050746, 050747, 050748, 050749, 050763, 050764, 050765, 050766, 050767, 050768, 050769, 050770, 050771, 050772, 050773, 050774, 050775, 050776, 050779, 050780, 050781, 050782, 050783, 050784, 050785, 050786, 050787, 050788, 050789, 050790, 050791, 050792, 050793, 050794, 050795, 050796, 050797, 050798, 050799, 050804, 050805, 050806, 050807, 050808, 050809, 050810, 050811, 050812, 050813, 050814, 050815, 050816, 050817, 050818, 050819, 050821, 050822, 050823, 050824, 050825, 050826, 050827, 050828, 050829, 050830, 050831, 050832, 050833, 050834, 050835, 050836, 050837, 050838, 050839, 050840, 050841, 050842, 050843, 050844, 050845, 050846, 050847, 050848, 050849, 050850, 050851, 050852, 050853, 050854, 050855, 050856, 050857, 050858, 050859, 050861, 050862, 050863, 050864, 050865, 050866, 050867, 050869, 050870, 050871, 050872, 050873, 050874, 050875, 050876, 050877, 050878, 050879, 050882, 050883, 050884, 050885, 050887, 050889, 050890, 050891, 050892, 050893, 050894, 050895, 050896, 050897, 050898, 050899, 050902, 050903, 050904, 050905, 050906, 050907, 050908, 050909, 050910, 050911, 050912, 050913, 050914, 050915, 050916, 050917, 050918, 050919, 050920, 050921, 050922, 050923, 050924, 050925, 050926, 050927, 050928, 050929, 050930, 050931, 050932, 050933, 050934, 050935, 050936, 050937, 050938, 050939, 050940, 050941, 050942, 050943, 050944, 050945, 050946, 050947, 050948, 050949, 050950, 050951, 050952, 050953, 050954, 050955, 050956, 050957, 050958, 050959, 050960, 050961, 050962, 050963, 050964, 050965, 050966, 050967, 050968, 050969, 050970, 050971, 050972, 050973, 050974, 050975, 050976, 050977, 050978, 050979, 050980, 050981, 050982, 050983, 050984, 050985, 050986, 050987, 050988, 050989, 050990, 050991, 050992, 050993, 050994, 050995, 050996, 050997, 050998, 050999, 08000, 08001, 08002, 08003, 08004, 08005, 08006, 08007, 08008, 08009, 08076, 08077, 08078, 08079, 08097, 08098, 08099, 09000, 09001, 09002, 09003, 09004, 09005, 09006, 09007, 09008, 09009, 07000, 07001, 07002, 07003, 07004, 07005, 07006, 07007, 07008, 07009, 07010, 07011, 07012, 07013, 07014, 07015, 07016, 07017, 07018, 07019, 07020, 07021, 07022, 07023, 07024, 07025, 07026, 07027, 07028, 07029, 07030, 07031, 07032, 07033, 07034, 07035, 07036, 07037, 07038, 07039, 07040, 07041, 07042, 07043, 07044, 07045, 07046, 07047, 07048, 07049, 07057, 07059, 07060, 07067, 07070, 07071, 07072, 07073, 07074, 07075, 07076, 07077, 07078, 07079, 07080, 07081, 07082, 07083, 07084, 07085, 07086, 07087, 07088, 07089, 07090, 07091, 07092, 07093, 07094, 07095, 07096, 07097, 07098, 07099]] operator[09] compareType[3] property[event.ec.customers.buyer.tel.mobile_number]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_ADD_MOBTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_ADD_MOBTEL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_ADD_TEL080")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_ADD_TEL080-1")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_ADD_TEL090")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_ADD_TEL090-1")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_CCHASH")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_COK")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_COK-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_DID")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_DID-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[CPUiPhoneOS[0-9_]*likeMacOSX] operator[14] compareType[3] property[event.device.userAgent]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_DID_IP")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_DID_IP-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_GIFT_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_GIFT_ADD-1")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_GIFT_NAME")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_GIFT_NAME-1")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_GIFT_TEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_GIFT_TEL-1")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_KM_CUSTID")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_MOBMAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_MOBMAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_MOBTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_MOBTEL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_MOBUID")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_MOBUID-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_NAME_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_NAME_ADD-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_NAME_BDAY")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_NAME_IP")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_NAME_IP-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_NAME_MOBTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_NAME_MOBTEL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_NAME_TEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_NAME_TEL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_PCMAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_PCMAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_SNAME_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_SNAME_ADD-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_SNAME_BDAY")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_SNAME_IP")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_SNAME_IP-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_SNAME_MOBTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_SNAME_MOBTEL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_SNAME_TEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_SNAME_TEL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_TEL080")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_TEL080-1")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("LOC_BLK_TEL090")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("LOC_BLK_TEL090-1")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("MAIL_VELO")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("MOBILEMAIL_VELO")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("MOBILETEL_VELO")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("MOBILE_MAIL")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("MOBPHONE_DIGIT_FIX")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("MOBPHONE_DIGIT_FIX-1")]
+I util.ScoringUtil doFunction: function start. function name[getLetter3] param[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("MOBPHONE_DIGIT_FIX_DELIVER")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("MOBPHONE_DIGIT_FIX_DELIVER-1")]
+I util.ScoringUtil doFunction: function start. function name[getLetter3] param[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("MOBPHONE_DIGIT_MOB")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("MOBPHONE_DIGIT_MOB-1")]
+I util.ScoringUtil doFunction: function start. function name[getLetter3] param[null]
+W service.authori.RuleBaseAuthoriLogic isConditionMatched: BusinessLogicMismatchException:The Condition has function 'getLetter' but the data is empty.
+W service.authori.RuleBaseAuthoriLogic isConditionMatched: BusinessLogicMismatchException:The Condition has function 'getLetter' but the data is empty.
+W service.authori.RuleBaseAuthoriLogic isConditionMatched: BusinessLogicMismatchException:The Condition has function 'getLetter' but the data is empty.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("MOBPHONE_DIGIT_MOB_DELIVER")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("MOBPHONE_DIGIT_MOB_DELIVER-1")]
+I util.ScoringUtil doFunction: function start. function name[getLetter3] param[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("MTEL_NONEX_NUM")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("MTEL_NONEX_NUM-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[[050182, 050183, 050184, 050185, 050186, 050187, 050188, 050189, 050190, 050191, 050192, 050193, 050194, 050195, 050196, 050197, 050198, 050199, 050204, 050205, 050206, 050207, 050208, 050209, 050210, 050211, 050212, 050213, 050214, 050215, 050216, 050217, 050218, 050219, 050221, 050222, 050223, 050224, 050225, 050226, 050227, 050228, 050229, 050230, 050231, 050232, 050233, 050234, 050235, 050236, 050237, 050238, 050239, 050241, 050242, 050243, 050244, 050245, 050246, 050247, 050248, 050249, 050250, 050251, 050252, 050253, 050254, 050255, 050256, 050257, 050258, 050259, 050260, 050261, 050262, 050263, 050264, 050265, 050266, 050267, 050268, 050269, 050270, 050271, 050272, 050273, 050274, 050275, 050276, 050277, 050278, 050279, 050280, 050281, 050282, 050283, 050284, 050285, 050286, 050287, 050288, 050289, 050290, 050291, 050292, 050293, 050294, 050295, 050296, 050297, 050298, 050299, 050326, 050327, 050328, 050329, 050383, 050384, 050385, 050386, 050387, 050388, 050389, 050391, 050392, 050393, 050394, 050395, 050396, 050397, 050398, 050399, 050400, 050401, 050402, 050403, 050404, 050405, 050406, 050407, 050408, 050409, 050410, 050411, 050412, 050413, 050414, 050415, 050416, 050417, 050418, 050419, 050420, 050421, 050422, 050423, 050424, 050425, 050426, 050427, 050428, 050429, 050430, 050431, 050432, 050433, 050434, 050435, 050436, 050437, 050438, 050439, 050440, 050441, 050442, 050443, 050444, 050445, 050446, 050447, 050448, 050449, 050450, 050451, 050452, 050453, 050454, 050455, 050456, 050457, 050458, 050459, 050460, 050461, 050462, 050463, 050464, 050465, 050466, 050467, 050468, 050469, 050470, 050471, 050472, 050473, 050474, 050475, 050476, 050477, 050478, 050479, 050480, 050481, 050482, 050483, 050484, 050485, 050486, 050487, 050488, 050489, 050490, 050491, 050492, 050493, 050494, 050495, 050496, 050497, 050498, 050499, 050501, 050502, 050503, 050504, 050505, 050506, 050507, 050508, 050509, 050510, 050511, 050512, 050513, 050514, 050515, 050516, 050517, 050518, 050519, 050521, 050522, 050523, 050524, 050525, 050526, 050527, 050528, 050529, 050530, 050531, 050532, 050533, 050534, 050535, 050536, 050537, 050538, 050539, 050540, 050541, 050542, 050543, 050544, 050545, 050546, 050547, 050548, 050549, 050557, 050558, 050559, 050560, 050561, 050562, 050563, 050564, 050565, 050566, 050567, 050568, 050569, 050570, 050571, 050572, 050573, 050574, 050575, 050576, 050577, 050578, 050585, 050586, 050587, 050588, 050589, 050590, 050591, 050592, 050593, 050594, 050595, 050596, 050597, 050598, 050599, 050601, 050602, 050603, 050604, 050605, 050606, 050607, 050608, 050609, 050611, 050612, 050613, 050614, 050615, 050616, 050617, 050618, 050619, 050620, 050621, 050622, 050623, 050624, 050625, 050626, 050627, 050628, 050629, 050630, 050631, 050632, 050633, 050634, 050635, 050636, 050637, 050638, 050639, 050640, 050641, 050642, 050643, 050644, 050645, 050646, 050647, 050648, 050649, 050650, 050651, 050652, 050653, 050654, 050655, 050656, 050657, 050658, 050659, 050660, 050663, 050664, 050665, 050666, 050667, 050668, 050669, 050670, 050671, 050672, 050673, 050674, 050675, 050676, 050677, 050678, 050679, 050680, 050681, 050682, 050683, 050684, 050685, 050687, 050688, 050689, 050690, 050691, 050692, 050693, 050694, 050695, 050696, 050697, 050698, 050699, 050701, 050702, 050703, 050704, 050705, 050706, 050707, 050708, 050709, 050712, 050713, 050714, 050715, 050716, 050717, 050718, 050719, 050720, 050721, 050722, 050723, 050724, 050725, 050726, 050727, 050728, 050729, 050731, 050732, 050733, 050734, 050735, 050736, 050737, 050738, 050739, 050740, 050741, 050742, 050743, 050744, 050745, 050746, 050747, 050748, 050749, 050763, 050764, 050765, 050766, 050767, 050768, 050769, 050770, 050771, 050772, 050773, 050774, 050775, 050776, 050779, 050780, 050781, 050782, 050783, 050784, 050785, 050786, 050787, 050788, 050789, 050790, 050791, 050792, 050793, 050794, 050795, 050796, 050797, 050798, 050799, 050804, 050805, 050806, 050807, 050808, 050809, 050810, 050811, 050812, 050813, 050814, 050815, 050816, 050817, 050818, 050819, 050821, 050822, 050823, 050824, 050825, 050826, 050827, 050828, 050829, 050830, 050831, 050832, 050833, 050834, 050835, 050836, 050837, 050838, 050839, 050840, 050841, 050842, 050843, 050844, 050845, 050846, 050847, 050848, 050849, 050850, 050851, 050852, 050853, 050854, 050855, 050856, 050857, 050858, 050859, 050861, 050862, 050863, 050864, 050865, 050866, 050867, 050869, 050870, 050871, 050872, 050873, 050874, 050875, 050876, 050877, 050878, 050879, 050882, 050883, 050884, 050885, 050887, 050889, 050890, 050891, 050892, 050893, 050894, 050895, 050896, 050897, 050898, 050899, 050902, 050903, 050904, 050905, 050906, 050907, 050908, 050909, 050910, 050911, 050912, 050913, 050914, 050915, 050916, 050917, 050918, 050919, 050920, 050921, 050922, 050923, 050924, 050925, 050926, 050927, 050928, 050929, 050930, 050931, 050932, 050933, 050934, 050935, 050936, 050937, 050938, 050939, 050940, 050941, 050942, 050943, 050944, 050945, 050946, 050947, 050948, 050949, 050950, 050951, 050952, 050953, 050954, 050955, 050956, 050957, 050958, 050959, 050960, 050961, 050962, 050963, 050964, 050965, 050966, 050967, 050968, 050969, 050970, 050971, 050972, 050973, 050974, 050975, 050976, 050977, 050978, 050979, 050980, 050981, 050982, 050983, 050984, 050985, 050986, 050987, 050988, 050989, 050990, 050991, 050992, 050993, 050994, 050995, 050996, 050997, 050998, 050999, 08000, 08001, 08002, 08003, 08004, 08005, 08006, 08007, 08008, 08009, 08076, 08077, 08078, 08079, 08097, 08098, 08099, 09000, 09001, 09002, 09003, 09004, 09005, 09006, 09007, 09008, 09009, 07000, 07001, 07002, 07003, 07004, 07005, 07006, 07007, 07008, 07009, 07010, 07011, 07012, 07013, 07014, 07015, 07016, 07017, 07018, 07019, 07020, 07021, 07022, 07023, 07024, 07025, 07026, 07027, 07028, 07029, 07030, 07031, 07032, 07033, 07034, 07035, 07036, 07037, 07038, 07039, 07040, 07041, 07042, 07043, 07044, 07045, 07046, 07047, 07048, 07049, 07057, 07059, 07060, 07067, 07070, 07071, 07072, 07073, 07074, 07075, 07076, 07077, 07078, 07079, 07080, 07081, 07082, 07083, 07084, 07085, 07086, 07087, 07088, 07089, 07090, 07091, 07092, 07093, 07094, 07095, 07096, 07097, 07098, 07099]] operator[09] compareType[3] property[event.ec.customers.buyer.tel.mobile_number]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("NAME_ADD_VELO")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("NAME_BTD_IP_VELO")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("NAME_CMP_IP_VELO")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("NAME_CMP_IP_VELO-0")]
+W service.authori.RuleBaseAuthoriLogic isConditionMatched: BusinessLogicMismatchException:The Condition has function 'getLetter' but the data is empty.
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[2] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("NAME_CMP_VELO")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("NAME_CMP_VELO-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[2] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("NAME_IP_VELO")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("NAME_IP_VELO-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[2] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("NAME_ZIP_BD_VELO")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("NEG_ITEM")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("NEG_ITEM-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[9999] operator[03] compareType[1] property[event.ec.settle.amount]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("NEG_TEL060")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("NEG_TEL060-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[060] operator[07] compareType[3] property[event.ec.customers.buyer.tel.mobile_number]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("NG_SYBL_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("NG_SYBL_ADD-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[小平市] y[[？, ＃, ／, ＝, ［, ］, ＾, ＜, ＞, ；, ?]] operator[09] compareType[3] property[event.ec.customers.buyer.address.addressB]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("NG_SYBL_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("NG_SYBL_ADD-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[小川西町3-25-12] y[[？, ＃, ／, ＝, ［, ］, ＾, ＜, ＞, ；, ?]] operator[09] compareType[3] property[event.ec.customers.buyer.address.addressC]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("NG_SYBL_COM")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("NG_SYBL_COM-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[[？, ＃, ／, ＝, ［, ］, ＾, ＜, ＞, ；, ?]] operator[09] compareType[3] property[event.ec.customers.buyer.company.name]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("NG_SYBL_DIV")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("NG_SYBL_DIV-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[[？, ＃, ／, ＝, ［, ］, ＾, ＜, ＞, ；, ?]] operator[09] compareType[3] property[event.ec.customers.buyer.company.department]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("NO_EXIST_POST_CURRENT_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("NO_EXIST_POST_CURRENT_ADD-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[1] operator[00] compareType[3] property[event.ec.customers.buyer.address.addressType]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("NO_EXIST_POST_NO_EXIST_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("NO_EXIST_POST_NO_EXIST_ADD-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[3] operator[00] compareType[3] property[event.ec.customers.buyer.address.addressType]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("NO_EXIST_POST_OLD_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("NO_EXIST_POST_OLD_ADD-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[2] operator[00] compareType[3] property[event.ec.customers.buyer.address.addressType]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("NO_PREFUCTURES")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("OLD_POST_CURRENT_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("OLD_POST_CURRENT_ADD-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[1] operator[00] compareType[3] property[event.ec.customers.buyer.address.addressType]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("OLD_POST_NO_EXIST_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("OLD_POST_NO_EXIST_ADD-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[3] operator[00] compareType[3] property[event.ec.customers.buyer.address.addressType]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("OLD_POST_OLD_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("OLD_POST_OLD_ADD-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[2] operator[00] compareType[3] property[event.ec.customers.buyer.address.addressType]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("OLD_TEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("OLD_TEL-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[1] operator[00] compareType[3] property[event.ec.customers.buyer.tel.telChangedHistoryType]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("PAID_COK")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("PAID_COK-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("PAID_DID")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("PAID_DID-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[CPUiPhoneOS[0-9_]*likeMacOSX] operator[14] compareType[3] property[event.device.userAgent]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("PAID_DID_IP")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("PAID_DID_IP-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("PAID_MOBMAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("PAID_MOBMAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("PAID_MOBUID")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("PAID_MOBUID-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("PAID_NAME_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("PAID_NAME_ADD-0")]
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+W service.authori.RuleBaseAuthoriLogic isMatched: The target or filterValue is null. No compare result.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[1] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: The rule[!shop001:AuthoriModel("TEST01")/ScoringRule("PAID_NAME_ADD")] fired!
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("PAID_NAME_MOBTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("PAID_NAME_MOBTEL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("PAID_NAME_TEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("PAID_NAME_TEL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("PAID_PCMAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("PAID_PCMAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("POS_ADDRESS")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("POS_ITEM")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("SHIPCOM_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("SHIPCOM_ADD-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[小川西町3-25-12] y[[所留, 留め, 止め, 所止, 局留, 局止, 社留, 社止]] operator[09] compareType[3] property[event.ec.customers.delivery.address.addressC]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("TEL_VELO")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("TEL_VELO-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[2] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("TEMP_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("TEMP_ADD-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[[ホテル, hotel, 学校, 大学, 高校, スクール, school, ユニバーシティ, カリッジ, 短大, 高専, 簿記, TAC, LEC, 旅館, 東横イン, 東急イン, 西鉄イン, ペンション, クリニック, 病院, 医院, 学生宿舎, の宿, メディカル, 資格の大原, 千葉大, 上智大, 専修大, university, college, University, College, 私書箱, 合宿所, 学生寮]] operator[09] compareType[3] property[event.ec.customers.buyer.company.name]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("TEMP_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("TEMP_ADD-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[小川西町3-25-12] y[[ホテル, hotel, 学校, 大学, 高校, スクール, school, ユニバーシティ, カリッジ, 短大, 高専, 簿記, TAC, LEC, 旅館, 東横イン, 東急イン, 西鉄イン, ペンション, クリニック, 病院, 医院, 学生宿舎, の宿, メディカル, 資格の大原, 千葉大, 上智大, 専修大, university, college, University, College, 私書箱, 合宿所, 学生寮]] operator[09] compareType[3] property[event.ec.customers.delivery.address.addressC]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("TEMP_MAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("TEMP_MAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("TEMP_MAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("TEMP_MAIL-1")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("TEST_NGTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("TEST_NGTEL-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0423436938] y[1] operator[08] compareType[3] property[event.ec.customers.buyer.tel.fixed_number]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("TEST_OKTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("TEST_OKTEL-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0423436938] y[0] operator[08] compareType[3] property[event.ec.customers.buyer.tel.fixed_number]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("TEST_REVIEWTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("TEST_REVIEWTEL-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0423436938] y[2] operator[08] compareType[3] property[event.ec.customers.buyer.tel.fixed_number]
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("VELO_DID_IP")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: Invalid Rule key[!shop001:AuthoriModel("TEST01")/ScoringRule("VELO_MOBUID")]. Skip this rule.
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("WHT_ADD_MOBTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("WHT_ADD_MOBTEL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("WHT_ADD_TEL080")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("WHT_ADD_TEL080-1")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("WHT_ADD_TEL090")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("WHT_ADD_TEL090-1")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("WHT_COK")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("WHT_COK-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("WHT_DID")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("WHT_DID-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[null] y[CPUiPhoneOS[0-9_]*likeMacOSX] operator[14] compareType[3] property[event.device.userAgent]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("WHT_DID_IP")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("WHT_DID_IP-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("WHT_MOBMAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("WHT_MOBMAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("WHT_MOBTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("WHT_MOBTEL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("WHT_MOBUID")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("WHT_MOBUID-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("WHT_NAME_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("WHT_NAME_ADD-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("WHT_NAME_IP")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("WHT_NAME_IP-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("WHT_NAME_MOBTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("WHT_NAME_MOBTEL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("WHT_NAME_TEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("WHT_NAME_TEL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("WHT_PCMAIL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("WHT_PCMAIL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("WHT_SNAME_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("WHT_SNAME_ADD-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("WHT_SNAME_IP")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("WHT_SNAME_IP-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("WHT_SNAME_MOBTEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("WHT_SNAME_MOBTEL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("WHT_SNAME_TEL")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("WHT_SNAME_TEL-0")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("WHT_TEL080")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("WHT_TEL080-1")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("WHT_TEL090")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("WHT_TEL090-1")]
+I service.authori.RuleBaseAuthoriLogic doFilter: Entity is empty. The baseQuery result is 0.
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[0] y[0] operator[03] compareType[1] property[null]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("WRD_IN_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("WRD_IN_ADD-0")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[小平市] y[[ネガティブテスト１, ネガティブテスト２]] operator[09] compareType[3] property[event.ec.customers.buyer.address.addressB]
+I service.authori.RuleBaseAuthoriLogic scoring: isConditionMatched Start::::: RuleKey[!shop001:AuthoriModel("TEST01")/ScoringRule("WRD_IN_ADD")] CondKey[!shop001:AuthoriModel("TEST01")/Condition("WRD_IN_ADD-1")]
+I service.authori.RuleBaseAuthoriLogic isConditionMatched: x[小川西町3-25-12] y[[ネガティブテスト１, ネガティブテスト２]] operator[09] compareType[3] property[event.ec.customers.buyer.address.addressC]
+I service.authori.RuleBaseAuthoriLogic scoring: All rules had done.
+I service.authori.RuleBaseAuthoriLogic doOriginalRule: Start original rule.
+I service.authori.NissenOriginalRule evaluate: totalAmount[0] threshold[18000.0]
+I service.authori.RuleBaseAuthoriLogic doOriginalRule: Finished original rule.
+I service.authori.AutoAuthoriResult judge: judge seq[1] score[OK] from[50000] to[99999] result[NG]
+I service.authori.AutoAuthoriResult judge: judge seq[2] score[OK] from[10000] to[49999] result[OK]
+I service.authori.AutoAuthoriResult judge: judge seq[3] score[OK] from[1000] to[9999] result[REVIEW]
+I service.authori.AutoAuthoriResult judge: judge seq[4] score[NG] from[10000] to[999999] result[NG]
+W service.authori.NissenOriginalRule getLimitPrice: The 'event.ec.settle.limit_price' parameter is empty. So use the default limit price.
+W service.authori.NissenOriginalRule getLimitPrice: The 'event.ec.settle.limit_price' parameter is empty. So use the default limit price.
+I controller.tq.SimilarEventController addTaskAtBackend: addTask to save similarEvents.
+I controller.tq.SimilarEventController addTaskAtBackend: Start serialize.
+I controller.tq.SimilarEventController addTaskAtBackend: End serialize.
+I controller.tq.SimilarEventController addTaskAtBackend: Start save file.
+I controller.tq.SimilarEventController addTaskAtBackend: End save file.
+I controller.tq.SimilarEventController addTaskAtBackend: Start add task.
+I controller.tq.SimilarEventController addTaskAtBackend: end add task.
+I controller.tq.SimilarEventController addTaskAtBackend: adding task to save similarEvent is finished.
+I controller.tq.MatchedBlackController addTaskAtBackend: No MatchedBlack.
+I controller.tq.MatchedBlackController addTaskAtBackend: Adding task is success.
+I [s~dev-staging/back-dynamichigh.374316541816476882].<stdout>: shopid:shop001 score:AMOUNT_UP/0/10000/0/1394441150687/false,DISCNCT_FIXTEL/0/0/10000/1394441150687/false,DISCNCT_MOBTEL/0/0/10000/1394441150687/false,HIRAGANA_NAME/0/0/500/1394441150688/false,ILLEGAL_TEL/0/0/10000/1394441150688/false,INVALIDTEL/0/0/1000/1394441150707/false,MARK_NAME/0/0/500/1394441150708/false,NAME_ALPHA/0/0/500/1394441150708/false,NO_ADD_NUMBER/0/0/1000/1394441150708/false,NO_AT_PRD_MAIL/0/0/10000/1394441150708/false,NO_AT_PRD_MOBMAIL/0/0/10000/1394441150709/false,NO_MATCH_ADD/0/0/1000/1394441150709/false,NO_NAME_DICT/0/0/500/1394441150710/false,SHT_NAME/0/0/500/1394441150710/false,TEL050_FIXTEL/0/0/0/1394441150710/false,TEL050_MOBTEL/0/0/0/1394441150710/false,TEL070_FIXTEL/0/0/0/1394441150710/false,TEL070_MOBTEL/0/0/0/1394441150711/false,UNK_CNCT_FIXTEL/0/0/10000/1394441150711/true,UNK_CNCT_MOBTEL/0/0/10000/1394441150726/false,?TEL050_FIXTEL/0/0/0/1394441150727/false,BAD_IP/0/0/10000/1394441150727/false,BLK_ADD_MAIL/0/10000/0/1394441150727/false,BLK_ADD_MOBMAIL/0/10000/0/1394441150734/false,BLK_ADD_MOBTEL/0/10000/0/1394441150771/false,BLK_ADD_TEL/0/10000/0/1394441150778/false,BLK_COK/0/10000/0/1394441150784/false,BLK_DID/0/10000/0/1394441150792/false,BLK_DID_IP/0/10000/0/1394441150792/false,BLK_GIFT_ADD/0/0/10000/1394441150799/false,BLK_GIFT_NAME/0/0/10000/1394441150805/false,BLK_GIFT_TEL/0/0/10000/1394441150815/false,BLK_MOBMAIL/0/0/10000/1394441150820/false,BLK_MOBTEL/0/0/10000/1394441150827/false,BLK_MOBUID/0/10000/0/1394441150833/false,BLK_NAME_ADD/0/10000/0/1394441150840/false,BLK_NAME_IP/0/0/10000/1394441150846/false,BLK_NAME_MAIL/0/10000/0/1394441150852/false,BLK_NAME_MOBMAIL/0/10000/0/1394441150859/false,BLK_NAME_MOBTEL/0/10000/0/1394441150872/false,BLK_NAME_TEL/0/10000/0/1394441150879/false,BLK_PCMAIL/0/0/10000/1394441150887/false,BLK_SNAME_IP/0/0/10000/1394441150895/false,BLK_SNAME_MAIL/0/10000/0/1394441150901/false,BLK_SNAME_MOBMAIL/0/10000/0/1394441150920/false,BLK_SNAME_MOBTEL/0/10000/0/1394441150926/false,BLK_SNAME_TEL/0/10000/0/1394441150972/false,BLK_TEL080/0/0/10000/1394441150986/false,BLK_TEL090/0/0/10000/1394441150993/false,CURRENT_POST_NO_EXIST_ADD/0/0/10000/1394441151002/false,CURRENT_POST_OLD_ADD/0/0/10000/1394441151003/false,DELAY_ADD/0/0/1000/1394441151003/false,DELAY_ADD_MAIL/0/10000/0/1394441151103/false,DELAY_ADD_MOBMAIL/0/10000/0/1394441151172/false,DELAY_ADD_MOBTEL/0/10000/0/1394441151178/false,DELAY_ADD_TEL/0/10000/0/1394441151185/false,DELAY_COK/0/0/10000/1394441151191/false,DELAY_DID/0/0/10000/1394441151198/false,DELAY_DID_IP/0/0/10000/1394441151198/false,DELAY_MAIL/0/0/10000/1394441151204/false,DELAY_MOBILEMAIL/0/0/10000/1394441151211/false,DELAY_MOBILETEL/0/0/10000/1394441151217/false,DELAY_MOBUID/0/0/10000/1394441151223/false,DELAY_NAME_ADD/0/10000/0/1394441151276/true,DELAY_NAME_IP/0/0/10000/1394441151306/false,DELAY_NAME_MAIL/0/10000/0/1394441151313/false,DELAY_NAME_MOBMAIL/0/10000/0/1394441151320/false,DELAY_NAME_MOBTEL/0/10000/0/1394441151327/false,DELAY_NAME_TEL/0/10000/0/1394441151334/false,DELAY_SNAME_MAIL/0/10000/0/1394441151341/false,DELAY_SNAME_MOBMAIL/0/10000/0/1394441151347/false,DELAY_SNAME_MOBTEL/0/10000/0/1394441151376/false,DELAY_SNAME_TEL/0/10000/0/1394441151383/false,DELAY_TEL/0/0/10000/1394441151390/false,FIXPHONE_DIGIT_FIX/0/0/1000/1394441151396/false,FIXPHONE_DIGIT_FIX_DELIVER/0/0/1000/1394441151396/false,FIXPHONE_DIGIT_MOB/0/0/1000/1394441151397/false,FIXPHONE_DIGIT_MOB_DELIVER/0/0/1000/1394441151397/false,IPTEL_NONEX_NUM/0/0/10000/1394441151397/false,LOC_BLK_ADD_MOBTEL/0/0/10000/1394441151398/false,LOC_BLK_ADD_TEL080/0/0/10000/1394441151404/false,LOC_BLK_ADD_TEL090/0/0/10000/1394441151411/false,LOC_BLK_COK/0/0/10000/1394441151418/false,LOC_BLK_DID/0/0/10000/1394441151425/false,LOC_BLK_DID_IP/0/0/10000/1394441151425/false,LOC_BLK_GIFT_ADD/0/0/10000/1394441151432/false,LOC_BLK_GIFT_NAME/0/0/10000/1394441151438/false,LOC_BLK_GIFT_TEL/0/0/10000/1394441151445/false,LOC_BLK_MOBMAIL/0/0/10000/1394441151452/false,LOC_BLK_MOBTEL/0/0/10000/1394441151458/false,LOC_BLK_MOBUID/0/0/10000/1394441151466/false,LOC_BLK_NAME_ADD/0/0/10000/1394441151472/false,LOC_BLK_NAME_IP/0/0/10000/1394441151478/false,LOC_BLK_NAME_MOBTEL/0/0/10000/1394441151485/false,LOC_BLK_NAME_TEL/0/0/10000/1394441151494/false,LOC_BLK_PCMAIL/0/0/10000/1394441151501/false,LOC_BLK_SNAME_ADD/0/0/10000/1394441151507/false,LOC_BLK_SNAME_IP/0/0/10000/1394441151513/false,LOC_BLK_SNAME_MOBTEL/0/0/10000/1394441151519/false,LOC_BLK_SNAME_TEL/0/0/10000/1394441151526/false,LOC_BLK_TEL080/0/0/10000/1394441151532/false,LOC_BLK_TEL090/0/0/10000/1394441151553/false,MOBPHONE_DIGIT_FIX/0/0/1000/1394441151560/false,MOBPHONE_DIGIT_FIX_DELIVER/0/0/1000/1394441151560/false,MOBPHONE_DIGIT_MOB/0/0/1000/1394441151560/false,MOBPHONE_DIGIT_MOB_DELIVER/0/0/1000/1394441151560/false,MTEL_NONEX_NUM/0/0/10000/1394441151561/false,NAME_CMP_IP_VELO/0/0/500/1394441151561/false,NAME_CMP_VELO/0/0/500/1394441151582/false,NAME_IP_VELO/0/0/500/1394441151588/false,NEG_ITEM/0/0/10000/1394441151596/false,NEG_TEL060/0/10000/0/1394441151596/false,NG_SYBL_ADD/0/0/500/1394441151596/false,NG_SYBL_COM/0/0/500/1394441151597/false,NG_SYBL_DIV/0/0/500/1394441151598/false,NO_EXIST_POST_CURRENT_ADD/0/0/10000/1394441151598/false,NO_EXIST_POST_NO_EXIST_ADD/0/0/10000/1394441151598/false,NO_EXIST_POST_OLD_ADD/0/0/10000/1394441151598/false,OLD_POST_CURRENT_ADD/0/0/10000/1394441151598/false,OLD_POST_NO_EXIST_ADD/0/0/10000/1394441151599/false,OLD_POST_OLD_ADD/0/0/10000/1394441151599/false,OLD_TEL/0/0/10000/1394441151599/false,PAID_COK/0/0/-500/1394441151599/false,PAID_DID/0/0/-500/1394441151605/false,PAID_DID_IP/0/0/-500/1394441151605/false,PAID_MOBMAIL/0/0/-500/1394441151612/false,PAID_MOBUID/0/0/-500/1394441151618/false,PAID_NAME_ADD/0/0/-500/1394441151625/true,PAID_NAME_MOBTEL/0/0/-500/1394441151646/false,PAID_NAME_TEL/0/0/-500/1394441151654/false,PAID_PCMAIL/0/0/-500/1394441151660/false,SHIPCOM_ADD/0/0/10000/1394441151666/false,TEL_VELO/0/0/1000/1394441151667/false,TEMP_ADD/0/0/500/1394441151675/false,TEMP_MAIL/0/0/1000/1394441151677/false,TEST_NGTEL/50000/0/0/1394441151677/false,TEST_OKTEL/10000/0/0/1394441151677/false,TEST_REVIEWTEL/1000/0/0/1394441151677/false,WHT_ADD_MOBTEL/0/0/-500/1394441151677/false,WHT_ADD_TEL080/0/0/-500/1394441151677/false,WHT_ADD_TEL090/0/0/-500/1394441151677/false,WHT_COK/0/0/-500/1394441151677/false,WHT_DID/0/0/-500/1394441151678/false,WHT_DID_IP/0/0/-500/1394441151678/false,WHT_MOBMAIL/0/0/-500/1394441151678/false,WHT_MOBTEL/0/0/-500/1394441151678/false,WHT_MOBUID/0/0/-500/1394441151678/false,WHT_NAME_ADD/0/0/-500/1394441151678/false,WHT_NAME_IP/0/0/-500/1394441151678/false,WHT_NAME_MOBTEL/0/0/-500/1394441151678/false,WHT_NAME_TEL/0/0/-500/1394441151678/false,WHT_PCMAIL/0/0/-500/1394441151679/false,WHT_SNAME_ADD/0/0/-500/1394441151679/false,WHT_SNAME_IP/0/0/-500/1394441151679/false,WHT_SNAME_MOBTEL/0/0/-500/1394441151679/false,WHT_SNAME_TEL/0/0/-500/1394441151679/false,WHT_TEL080/0/0/-500/1394441151679/false,WHT_TEL090/0/0/-500/1394441151679/false,WRD_IN_ADD/0/0/1000/1394441151679/false,LIM_PRI_OVER/0/0/10000/1394441144178/false eventKey:140310084543544B5DD2D5018F74A14893F48288693BC91 amkey:TEST01 rh:
+I controller.tq.MulodoAuthoriController saveResult: Lenght of CSV Result :3521
+I controller.tq.MulodoAuthoriController insertOutputFile: Update list file with :!shop001:SplitMerge("2014-03-10-08:45:29.0012-4472349994004738980")/SplitMergeSub(1):0#file-upload/shop001-TEST01-a-6954597347587819042-2014-03-10_08-45-0054-0.csv
+I controller.tq.MulodoAuthoriController insertOutputFile: Update list file with successs with !shop001:SplitMerge("2014-03-10-08:45:29.0012-4472349994004738980")/SplitMergeSub(1)
+I controller.tq.MulodoAuthoriController updateCronChecker: Update list file with successs with !Global:CronChecker("2014-03-10-08:45:29.0012-44723499940047389801")
+I controller.tq.MulodoAuthoriController checkAllFinished: list-Entity : 1
+I controller.tq.MulodoAuthoriController addTaskMergeFile: Add Task MergeFile Controller Complete :!shop001:SplitMerge("2014-03-10-08:45:29.0012-4472349994004738980")/SplitMergeSub(1)
+I controller.tq.MulodoAuthoriController run: Bulk Authori End. Time:13173

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/junit-4.7.jar" sourcepath="/Users/VanTho/.m2/repository/junit/junit/4.7/junit-4.7-sources.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/simple-xml-2.6.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/jsonic-1.0.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/slim3-1.0.16.jar"/>
+	<classpathentry exported="true" kind="lib" path="war/WEB-INF/lib/ktrwjr.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/hamcrest-core-1.3.0RC1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/hamcrest-library-1.3.0RC1.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/google_sql.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/slim3-gen-1.0.16.jar"/>
+	<classpathentry kind="lib" path="lib/google-api-services-drive-v2-rev121-1.18.0-rc.jar"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry exported="true" kind="con" path="com.google.appengine.eclipse.core.GAE_CONTAINER"/>
+	<classpathentry kind="output" path="war/WEB-INF/classes"/>
+</classpath>

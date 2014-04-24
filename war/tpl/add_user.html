@@ -1,0 +1,36 @@
+<form class="form-horizontal" role="form">
+  <fieldset>
+     <div>
+       <label for="account">Account
+          <input type="text" class="form-control" required="required" id="account" value="<%=account %>" />
+       </label>
+     </div>
+  </fieldset>
+  <fieldset>
+     <div>
+       <label for="password"> Password
+          <input type="text" class="form-control" id="password" required="required" value="<%=password%>"/>
+       </label>
+     </div>
+  </fieldset>
+  <fieldset>
+     <div>
+       <label for="email">Email
+          <input type="text" class="form-control" id="email"  value="<%=email %>"/>
+       </label>
+     </div>
+  </fieldset>
+  <fieldset>
+     <div>
+       <label for="img_file">
+          <input type="file" name="img_file" id="img_file" accept="image/*" /><br>
+       </label>
+     </div>
+  </fieldset>
+  
+    <fieldset>
+      <div >
+         <button id ="btn-add"  class="btn btn-primary btn-info"><span class="glyphicon glyphicon-plus"></span> Save</button>
+      </div>
+   </fieldset>
+</form>
