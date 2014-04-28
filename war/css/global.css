@@ -20,6 +20,8 @@ ul li {
 a:hover { 
 	background-color: white; 
 }
+ul.nav li a button.btn-add { display:none;}
+ul.nav li a:hover button.btn-add { display:inline-block;}
 
 input.err { background-color: orange; }
 

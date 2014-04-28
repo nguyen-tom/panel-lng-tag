@@ -10,7 +10,7 @@ import com.panel.note.dto.common.CompanyDto;
 import com.panel.note.dto.common.Error;
 import com.panel.note.dto.common.Errors;
 import com.panel.note.dto.response.BaseRes;
-import com.panel.note.dto.response.CompanyRes;
+import com.panel.note.dto.response.ListObjectRes;
 import com.panel.note.model.Company;
 import com.panel.note.util.Const;
 
@@ -54,9 +54,9 @@ public class CompanyService {
         }
         return baseRes;
     }
-    public CompanyRes getAllCompanies(){
+    public  ListObjectRes<CompanyDto> getAllCompanies(){
         CompanyDao  dao  = new CompanyDao();
-        CompanyRes companyRes  = new CompanyRes();
+        ListObjectRes<CompanyDto> companyRes  = new ListObjectRes<CompanyDto>();
         companyRes.setTime(System.currentTimeMillis());
         Error error;
         Errors errors  = new Errors();
@@ -67,7 +67,7 @@ public class CompanyService {
                 for (Company company : companies){
                     compsDto.add(createCompanyDto(company));
                 }
-                companyRes.setDatas(compsDto);
+                companyRes.setData(compsDto);
             }
            companyRes.setResult(Const.RESULT_OK);
         }catch(Exception e){

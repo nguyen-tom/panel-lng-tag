@@ -5,14 +5,14 @@ import java.util.Enumeration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.mortbay.log.Log;
 import org.slim3.controller.Controller;
 import org.slim3.controller.Navigation;
 
 import com.google.appengine.api.datastore.Key;
+import com.panel.note.dto.common.CompanyDto;
 import com.panel.note.dto.common.Errors;
 import com.panel.note.dto.response.BaseRes;
-import com.panel.note.dto.response.CompanyRes;
+import com.panel.note.dto.response.ListObjectRes;
 import com.panel.note.model.Company;
 import com.panel.note.service.common.CompanyService;
 import com.panel.note.util.ResponseUtil;
@@ -82,7 +82,7 @@ public class CompanyController extends Controller {
         
     }
     private void getListCompany(){
-        CompanyRes companyRes  = companyService.getAllCompanies();
+        ListObjectRes<CompanyDto> companyRes  = companyService.getAllCompanies();
         try {
             ResponseUtil.dtoToJsonResponse(companyRes, request, response);
         } catch (IOException e) {

@@ -1,6 +1,6 @@
 package com.panel.note.meta;
 
-//@javax.annotation.Generated(value = { "slim3-gen", "@VERSION@" }, date = "2014-04-23 15:47:40")
+//@javax.annotation.Generated(value = { "slim3-gen", "@VERSION@" }, date = "2014-04-25 14:28:13")
 /** */
 public final class LanguageMeta extends org.slim3.datastore.ModelMeta<com.panel.note.model.Language> {
 

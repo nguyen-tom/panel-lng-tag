@@ -11,6 +11,7 @@ var ListCompanyView = Backbone.View.extend({
     },
     events:{
     	"click #btn-add-type":"addCompany"
+        
     },
     
     addCompany:function(event){

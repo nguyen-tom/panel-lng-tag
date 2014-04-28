@@ -2,12 +2,12 @@ package com.panel.note.dto.common;
 
 import java.io.Serializable;
 
-public class CompanyDto implements Serializable{
+public class CompanyDto extends BaseDto implements Serializable{
    
     private String name;
     private String address;
     private String taxCode;
-    private String key;
+    
     
     
     
@@ -28,12 +28,6 @@ public class CompanyDto implements Serializable{
     }
     public void setTaxCode(String taxCode) {
         this.taxCode = taxCode;
-    }
-    public String getKey() {
-        return key;
-    }
-    public void setKey(String key) {
-        this.key = key;
     }
     
     

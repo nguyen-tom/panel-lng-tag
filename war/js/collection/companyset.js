@@ -4,7 +4,7 @@ var CompanyCollection =  Backbone.Collection.extend({
 	parse: function (response) {
 		
 		console.log("Start Parse..." + response);
-		var datas = response.datas;
+		var datas = response.data;
 		//Parse the response and construct models			
 		for (var i = 0, length = datas.length; i < length; i++) {
 			var currentValues = datas[i];
