@@ -12,9 +12,26 @@ define([
 	        this.currentView = view;
 	        return view;
 	    },
-		
+		checkLogined:function(callback){
+	    	$.ajax("/auth/logined", {
+	    	       type: "get",
+	    	       dataType: "json",
+	    	       success: function(data) {
+	    	    	   if(data.result == 10){
+	    	    		   console.log("logined");
+	    	    		   return callback(true);
+	    	    	   }else{
+	    	    		   return callback(false);
+	    	    	   }
+	    	       },
+	    	       error: function() {
+	    	         return callback(false);
+	    	       }
+	    	     });
+	    }
 		
 	});
+	
 	
 	
 	return Utils;

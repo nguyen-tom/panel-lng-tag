@@ -4,11 +4,13 @@ import java.io.Serializable;
 import java.util.Date;
 
 import org.slim3.datastore.Attribute;
+import org.slim3.datastore.InverseModelListRef;
 import org.slim3.datastore.Model;
 
 import com.google.appengine.api.datastore.Key;
+import com.panel.note.meta.AgentMeta;
 
-@Model(schemaVersion = 1)
+@Model(schemaVersion = 2)
 public class Company  implements Serializable{
 
     /**
@@ -25,6 +27,12 @@ public class Company  implements Serializable{
     private String address;
     private String website;
     private String taxCode;
+    private Boolean invalid = false;
+    
+    
+    @Attribute(persistent=false)
+    private InverseModelListRef<Agent, Company> operatorsRef =
+      new InverseModelListRef<Agent, Company>(Agent.class, AgentMeta.get().companyRef, this);
     
     private Date join;
     
@@ -71,6 +79,15 @@ public class Company  implements Serializable{
     }
     public void setJoin(Date join) {
         this.join = join;
+    }
+    public Boolean getInvalid() {
+        return invalid;
+    }
+    public void setInvalid(Boolean invalid) {
+        this.invalid = invalid;
+    }
+    public InverseModelListRef<Agent, Company> getOperatorsRef() {
+        return operatorsRef;
     }
    
 

@@ -30,9 +30,19 @@ define([
 			        return this;
 			   },
 			   events:{
+				   "click .nav-item": 'clickAllMenu',
 				   "click #type":'clickType',
 				   "click #company": 'clickCompany',
 				   "click .btn-add": 'clickAddLanguage'
+			   },
+			   clickAllMenu:function(e){
+				   console.log("ACTION...");
+				    e.preventDefault();
+				    var navItems = $('.nav-stacked li > a');
+				    var navListItems = $('.nav-stacked li'); 
+				   
+			        navListItems.removeClass('active');
+			        $(this).closest('li').addClass('active');
 			   },
 			   clickType:function(event){
 				  var typeView  = new TypeView();

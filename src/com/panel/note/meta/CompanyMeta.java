@@ -1,11 +1,14 @@
 package com.panel.note.meta;
 
-//@javax.annotation.Generated(value = { "slim3-gen", "@VERSION@" }, date = "2014-04-25 14:28:13")
+//@javax.annotation.Generated(value = { "slim3-gen", "@VERSION@" }, date = "2014-05-06 08:27:02")
 /** */
 public final class CompanyMeta extends org.slim3.datastore.ModelMeta<com.panel.note.model.Company> {
 
     /** */
     public final org.slim3.datastore.StringAttributeMeta<com.panel.note.model.Company> address = new org.slim3.datastore.StringAttributeMeta<com.panel.note.model.Company>(this, "address", "address");
+
+    /** */
+    public final org.slim3.datastore.CoreAttributeMeta<com.panel.note.model.Company, java.lang.Boolean> invalid = new org.slim3.datastore.CoreAttributeMeta<com.panel.note.model.Company, java.lang.Boolean>(this, "invalid", "invalid", java.lang.Boolean.class);
 
     /** */
     public final org.slim3.datastore.CoreAttributeMeta<com.panel.note.model.Company, java.util.Date> join = new org.slim3.datastore.CoreAttributeMeta<com.panel.note.model.Company, java.util.Date>(this, "join", "join", java.util.Date.class);
@@ -43,6 +46,7 @@ public final class CompanyMeta extends org.slim3.datastore.ModelMeta<com.panel.n
     public com.panel.note.model.Company entityToModel(com.google.appengine.api.datastore.Entity entity) {
         com.panel.note.model.Company model = new com.panel.note.model.Company();
         model.setAddress((java.lang.String) entity.getProperty("address"));
+        model.setInvalid((java.lang.Boolean) entity.getProperty("invalid"));
         model.setJoin((java.util.Date) entity.getProperty("join"));
         model.setKey(entity.getKey());
         model.setName((java.lang.String) entity.getProperty("name"));
@@ -62,12 +66,13 @@ public final class CompanyMeta extends org.slim3.datastore.ModelMeta<com.panel.n
             entity = new com.google.appengine.api.datastore.Entity(kind);
         }
         entity.setProperty("address", m.getAddress());
+        entity.setProperty("invalid", m.getInvalid());
         entity.setProperty("join", m.getJoin());
         entity.setProperty("name", m.getName());
         entity.setProperty("taxCode", m.getTaxCode());
         entity.setProperty("version", m.getVersion());
         entity.setProperty("website", m.getWebsite());
-        entity.setProperty("slim3.schemaVersion", 1);
+        entity.setProperty("slim3.schemaVersion", 2);
         return entity;
     }
 
@@ -133,6 +138,10 @@ public final class CompanyMeta extends org.slim3.datastore.ModelMeta<com.panel.n
             writer.setNextPropertyName("address");
             encoder0.encode(writer, m.getAddress());
         }
+        if(m.getInvalid() != null){
+            writer.setNextPropertyName("invalid");
+            encoder0.encode(writer, m.getInvalid());
+        }
         if(m.getJoin() != null){
             writer.setNextPropertyName("join");
             encoder0.encode(writer, m.getJoin());
@@ -167,6 +176,8 @@ public final class CompanyMeta extends org.slim3.datastore.ModelMeta<com.panel.n
         org.slim3.datastore.json.Default decoder0 = new org.slim3.datastore.json.Default();
         reader = rootReader.newObjectReader("address");
         m.setAddress(decoder0.decode(reader, m.getAddress()));
+        reader = rootReader.newObjectReader("invalid");
+        m.setInvalid(decoder0.decode(reader, m.getInvalid()));
         reader = rootReader.newObjectReader("join");
         m.setJoin(decoder0.decode(reader, m.getJoin()));
         reader = rootReader.newObjectReader("key");

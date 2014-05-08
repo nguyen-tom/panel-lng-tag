@@ -1,4 +1,4 @@
-package com.panel.note.dao.common;
+                                                                                                                                                                                                                   package com.panel.note.dao.common;
 
 import java.util.List;
 import java.util.logging.Logger;
@@ -22,7 +22,9 @@ public class CompanyDao extends DaoBase<Company> {
             if(name == null || name.equalsIgnoreCase("")) throw new IllegalArgumentException("Error Name Company");
             if(address == null || address.equalsIgnoreCase("") )  throw new IllegalArgumentException("Error Address Company");
             NamespaceManager.set(Const.NAMESPACE_GLOBAL);
-            Key key = Datastore.put(company);
+            Key key  = this.createKey(name);
+            company.setKey(key);
+             Datastore.put(company);
             if(key == null) throw new  IllegalArgumentException("Insert Company Error ");
     }
     public Company getCompany(String name) throws Exception{
@@ -58,7 +60,7 @@ public class CompanyDao extends DaoBase<Company> {
         String beforeNS = NamespaceManager.get();
         try{
             NamespaceManager.set(Const.NAMESPACE_GLOBAL);
-            return Datastore.createKey(Type.class,name );
+            return Datastore.createKey(Company.class,name );
         }finally{
             NamespaceManager.set(beforeNS);
         }

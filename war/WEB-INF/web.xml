@@ -26,7 +26,10 @@
         <filter-name>FrontController</filter-name>
         <filter-class>org.slim3.controller.FrontController</filter-class>
     </filter>
-
+   <filter>
+        <filter-name>PanelNoteFilter</filter-name>
+        <filter-class>com.panel.note.controller.filter.PanelNoteFilter</filter-class>
+    </filter>
     <filter-mapping>
         <filter-name>HotReloadingFilter</filter-name>
         <url-pattern>/*</url-pattern>
@@ -37,6 +40,11 @@
         <url-pattern>/*</url-pattern>
         <dispatcher>REQUEST</dispatcher>
     </filter-mapping>
+    <filter-mapping>
+		<filter-name>PanelNoteFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+		<dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
     <filter-mapping>
         <filter-name>FrontController</filter-name>
         <url-pattern>/*</url-pattern>
@@ -89,6 +97,8 @@
         <auth-constraint>
         </auth-constraint>
     </security-constraint>
+    
+    
     <security-constraint>
         <web-resource-collection>
             <url-pattern>/slim3/gtx</url-pattern>
@@ -97,6 +107,8 @@
             <role-name>admin</role-name>
         </auth-constraint>
     </security-constraint>
+    
+    
     <security-constraint>
         <web-resource-collection>
             <url-pattern>/ktrwjr/*</url-pattern>
@@ -105,4 +117,10 @@
             <role-name>admin</role-name>
         </auth-constraint>
     </security-constraint>
+    
+    
+    <session-config>
+      <session-timeout>30</session-timeout> 
+    </session-config>
+    
 </web-app>

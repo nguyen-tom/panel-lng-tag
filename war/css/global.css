@@ -38,6 +38,13 @@ input.err { background-color: orange; }
  float:left;
  background-color: aqua;
 }
+#login{
+   padding-top: 30px;
+}
+.box-login{
+	  background-color: gray;
+	  padding:20px;
+}
 
 #body{
  width:600px;

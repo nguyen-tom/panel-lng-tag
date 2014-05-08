@@ -35,9 +35,12 @@ define([
 		
 			  sync: function(method, model, options) {
 				    options = options || {};
+				    options.beforeSend = function (xhr) {
+				    	xhr.setRequestHeader('RequestType', 'ajax');
+				    };
 				    options.url = model.methodUrl[method.toLowerCase()];
 				    //options.data = JSON.stringify(this.get('id'));
-				    return Backbone.sync.apply(this, arguments);
+				    sync(method, model, options);
 				  },
 			  save: function (attributes, options) {
 				  options       = options || {};

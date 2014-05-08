@@ -40,6 +40,7 @@ public class TypesController extends Controller {
     }
     
     private Navigation find() throws Exception {
+        
         TypeDao dao = new TypeDao("fole");
         logger.fine("find start");
 

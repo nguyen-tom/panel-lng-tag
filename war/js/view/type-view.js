@@ -4,19 +4,25 @@ define([
   'backbone',
   'app_registry',
   'collection/typeset',
+  'dialog/progress',
   'view/list_type_view',
   'view/list-objects-view'
 ], function($, _, Backbone,app_registry,
-		TypeSet,ListView,ListObjectsView){
+		TypeSet,NoteProgressBar,ListView,ListObjectsView){
 
 		var TypeView = Backbone.View.extend({
 			initialize:function () {
 				 if(this.listTypeView) this.listTypeView.close();
 				   var listType  = new TypeSet();
 				   app_registry.models.listType = listType;
+				   var progress = new NoteProgressBar();
+				   progress.render();
+			    	$('#myModal').html(progress.el);
+				    $('#myModal').modal();
 				   listType.fetch({
 					   success:function(){
 						   console.log(listType);
+						   progress.cancel();
 						   this.listTypeView  = new ListView({model:listType});
 						   var listObjectsView  = new  ListObjectsView();
 						   listObjectsView.render().$el.html(this.listTypeView.render().el);
