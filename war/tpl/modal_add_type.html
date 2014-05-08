@@ -1,0 +1,30 @@
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h4 class="modal-title" id="myModalLabel">Add Type</h4>
+      </div>
+      <div class="modal-body">
+       <!--  body  -->
+       <label for="name">Name
+          <input type="text" class="form-control" id="name" value="<%=name %>" />
+       </label><br>
+       <label for="description"> Description
+          <input type="text" class="form-control" id="description" required="required" value="<%=description %>"/>
+       </label><br>
+       <label for="max_item">Max Item
+          <input type="text" class="form-control" id="max_item" required="required" value="<%=maxItem %>"/>
+       </label><br>
+       <label for="min_item">Min Item
+          <input type="text" class="form-control" id="min_item" required="required" value="<%=minItem %>"/>
+       </label><br>
+      <div >
+         <button id ="btn-add"  class="btn btn-primary btn-info"><span class="glyphicon glyphicon-plus"></span> Add</button>
+         <button id ="btn-cancel"  class="btn btn-primary"><span class="glyphicon glyphicon-ban-circle"></span> Close</button>
+      </div>
+   
+       <!-- end body  -->  
+  </div>
+</div>
+</div>
+
